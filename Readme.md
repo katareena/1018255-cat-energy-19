@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [E katerina](https://up.htmlacademy.ru/adaptive/19/user/1018255).
-* Наставник: `Неизвестно`.
+* Наставник: [Антон Игнатенко](https://htmlacademy.ru/profile/id987931).
 
 ---
 
