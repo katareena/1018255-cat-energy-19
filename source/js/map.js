@@ -7,9 +7,9 @@ function mapInit() {
 
   var placemark = new ymaps.Placemark([59.938631, 30.323055], {}, {
     iconLayout: 'default#image',
-    iconImageHref: 'img/pin.svg',
-    iconImageSize: [80, 140],
-    iconImageOffset: [-40, -140],
+    iconImageHref: 'img/map-pin-png-50.svg',
+    iconImageSize: [55, 53],
+    iconImageOffset: [-25, -53],
   });
 
   map.geoObjects.add(placemark);
