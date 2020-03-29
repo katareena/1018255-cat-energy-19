@@ -13,8 +13,10 @@
       </a>
 
       <nav class="main-nav">
-        <button class="main-nav__toggle button" type="button">Открыть меню</button>
-        <span class="button button-toggle"></span>
+        <button class="main-nav__toggle burger" type="button">Открыть меню
+          <span></span>
+        </button>
+
 
           <ul class="main-nav__list">
             <li class="main-nav__item">
@@ -41,8 +43,9 @@
         <a class="commercial__button button" href="catEnergy-form.html">Подобрать программу</a>
       </section>
 
-      <div class="program__container">
-        <section class="program">
+
+      <section class="program">
+        <div class="program__container">
           <h2 class="visually-hidden">Программы питания</h2>
           <article class="program__item">
             <h3 class="program__title">Похудение</h3>
@@ -55,11 +58,12 @@
             <p class="program__detail">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
             <div class="program__box"><a class="program__link" href="">Каталог Pro</a></div>
           </article>
-        </section>
-      </div>
+        </div>
+      </section>
 
-      <div class="features__container">
-        <section class="features">
+
+      <section class="features">
+        <div class="features__container"></div>
           <h2 class="features__title">Как это работает</h2>
 
           <ul class="features__list">
@@ -76,9 +80,9 @@
               <p>Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
             </li>
           </ul>
+        </div>
+      </section>
 
-        </section>
-      </div>
 
       <section class="example">
         <h2 class="example__title">Живой пример</h2>
@@ -96,17 +100,18 @@
         </div>
         <div class="example__costs">Затраты на питание: 15 000 руб.</div>
 
-
+        <!--разобраться со слайдером-->
         <div class="example__progress">
-          <span>Было</span>
+          <button class="example__button button " type="button">Было</button>
           <div id="comparison">
             <figure>
               <div id="handle"></div>
               <div id="divisor"></div>
             </figure>
-            <input type="range" min="0" max="100" value="50" id="slider" oninput="moveDivisor()">
+            <!--type="range" - нет кроссбраузерности-->
+            <input type="range" min="0" max="100" value="50" id="slider">
           </div>
-          <span>Стало</span>
+          <button class="example__button button " type="button">Стало</button>
         </div>
       </section>
           <!--<figure>
@@ -121,22 +126,19 @@
             <button class="example__button button " type="button">Стало</button>
           </div>-->
 
-      <section class="contacts">
-        <h2 class="visually-hidden">Как до нас добраться</h2>
-
-          <div class="contacts__box">
-            <p class="contacts__invite">Приглашаем к сотрудничеству дилеров!</p>
-            <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
-          </div>
 
 
-        <!---->
-        <div class="map__visual" style="height: 300px;">
-          <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp"></script>
-          <script src="js/map.js"></script>
-        </div>
+        <section class="contacts">
+          <h2 class="visually-hidden">Как до нас добраться</h2>
+            <div class="contacts__box">
+              <p class="contacts__invite">Приглашаем к сотрудничеству дилеров!</p>
+              <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+            </div>
 
-      </section>
+            <div class="map" style="height: 300px;"> <!--высота временно, мне так удобнее--></div>
+        </section>
+
+
     </main>
 
     <footer class="page-footer">
@@ -145,7 +147,7 @@
         <img class="page-footer__logo-image" src="img/logotype-footer-mobile.svg" width="128" height="24" alt="Магазин «Кэт энерджи»">
       </a>
 
-        <ul class="social__list social">
+        <ul class="social">
           <li class="social__item">
             <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy" aria-label="Мы в Вконтакте"></a>
           </li>
@@ -164,5 +166,7 @@
 
     </footer>
 
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp"></script>
+    <script src="js/map.js"></script>
   </body>
 </html>
