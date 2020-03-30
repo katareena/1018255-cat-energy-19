@@ -13,7 +13,8 @@
       </a>
 
       <nav class="main-nav">
-        <button class="main-nav__toggle burger" type="button">Открыть меню
+        <button class="main-nav__toggle burger" type="button">
+          <span>Открыть меню</span>
           <span></span>
         </button>
 
@@ -40,58 +41,72 @@
 
         <fieldset class="form__module">
           <div class="field-text">
-            <label class="form__label" for="name">Имя:*</label>
-            <input class="form__input" id="name" type="text" name="name" placeholder="Введите имя кота" value="Барсик">
+            <label class="field-text__label" for="name">Имя:*</label>
+            <input class="field-text__input" id="name" type="text" name="name" placeholder="Введите имя кота" value="Барсик">
           </div>
           <div class="field-text">
-            <label class="form__label" for="weight">Вес (кг):*</label>
-            <input class="form__input" id="weight" name="weight"  type="number" placeholder="Введите вес кота" value="7">
+            <label class="field-text__label" for="weight">Вес (кг):*</label>
+            <input class="field-text__input" id="weight" name="weight"  type="number" placeholder="Введите вес кота" value="7">
           </div>
           <div class="field-text">
-            <label class="form__label" for="age">Возраст (лет):</label>
-            <input class="form__input" id="age" name="age"  type="number" placeholder="Введите возраст кота" value="7">
+            <label class="field-text__label" for="age">Возраст (лет):</label>
+            <input class="field-text__input" id="age" name="age"  type="number" placeholder="Введите возраст кота" value="7">
           </div>
         </fieldset>
 
         <fieldset class="form__module">
           <ul class="filter">
             <li class="field-radio">
-              <input class="field-radio__input" type="radio" name="purpose" value="slim" id="purpose1" checked><label for="purpose1">Похудение</label></li>
+              <input class="field-radio__input" type="radio" name="purpose" value="slim" id="purpose1" checked>
+              <label class="field-radio__label"for="purpose1">Похудение</label>
+            </li>
             <li class="field-radio">
-              <input class="field-radio__input" type="radio" name="purpose" value="mass" id="purpose2"><label for="purpose2">Набор массы</label></li>
+              <input class="field-radio__input" type="radio" name="purpose" value="mass" id="purpose2">
+              <label class="field-radio__label" for="purpose2">Набор массы</label>
+            </li>
             <li class="field-radio">
-              <input class="field-radio__input" type="radio" name="purpose" value="advice" id="purpose3"><label for="purpose3">Не знаю (нужен ваш совет)</label></li>
+              <input class="field-radio__input" type="radio" name="purpose" value="advice" id="purpose3">
+              <label class="field-radio__label" for="purpose3">Не знаю (нужен ваш совет)</label>
+            </li>
           </ul>
         </fieldset>
 
         <fieldset class="form__module">
           <legend class="form__title">Контактные данные (владельца кота)</legend>
           <div class="field-text">
-            <label class="form__label" for="mail">E-mail:*</label>
-            <input class="form__input" id="mail" type="email" name="mail" placeholder="kuklachev@gmail.com">
+            <label class="field-text__label" for="mail">E-mail:*</label>
+            <input class="field-text__input" id="mail" type="email" name="mail" placeholder="kuklachev@gmail.com">
           </div>
           <div class="field-text">
-            <label class="form__label" for="phone">Телефон:*</label>
-            <input class="form__input" id="phone" name="telephone"  type="tel" placeholder="8 (960) 900-60-90" maxlength="17">
+            <label class="field-text__label" for="phone">Телефон:*</label>
+            <input class="field-text__input" id="phone" name="telephone"  type="tel" placeholder="8 (960) 900-60-90" maxlength="17">
           </div>
         </fieldset>
 
         <div class="form__module">
           <h3 class="form__title">Комментарий</h3>
-          <textarea class="field-text" name="comment" id="">Расскажите обо всех повадках кота</textarea>
+          <textarea class="form__comment" name="comment" id="">Расскажите обо всех повадках кота</textarea>
         </div>
 
         <fieldset class="form__module">
           <legend class="form__title">Дополнительно</legend>
           <ul class="filter-extra">
             <li class="field-checkbox">
-              <input class="field-checkbox_input" type="checkbox" name="sugar-substitute" id="extra1" checked><label for="extra1">Сахарозаменитель</label></li>
+              <input class="field-checkbox__input" type="checkbox" name="sugar-substitute" id="extra1" checked>
+              <label class="field-checkbox__label" for="extra1">Сахарозаменитель</label>
+            </li>
             <li class="field-checkbox">
-              <input class="field-checkbox_input" type="checkbox" name="water" id="extra2"><label for="extra2">Питьевая вода</label></li>
+              <input class="field-checkbox__input" type="checkbox" name="water" id="extra2">
+              <label class="field-checkbox__label" for="extra2">Питьевая вода</label>
+            </li>
             <li class="field-checkbox">
-              <input class="field-checkbox_input" type="checkbox" name="milk" id="extra3"><label for="extra3">Молоко</label></li>
+              <input class="field-checkbox__input" type="checkbox" name="milk" id="extra3">
+              <label class="field-checkbox__label" for="extra3">Молоко</label>
+            </li>
             <li class="field-checkbox">
-              <input class="field-checkbox_input" type="checkbox" name="vitamins" id="extra4"><label for="extra4">Витамины</label></li>
+              <input class="field-checkbox__input" type="checkbox" name="vitamins" id="extra4">
+              <label class="field-checkbox__label" for="extra4">Витамины</label>
+            </li>
           </ul>
         </fieldset>
 
@@ -129,10 +144,12 @@
           </li>
         </ul>
 
-      <article class="copyright">
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-        <img src="img/htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy">
-      </article>
+        <article class="copyright">
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <span class="copyright__text">HTML Academy</span>
+            <img class="copyright__pic" src="img/htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy">
+          </a>
+        </article>
 
     </footer>
 
