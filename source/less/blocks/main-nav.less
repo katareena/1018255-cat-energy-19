@@ -7,20 +7,20 @@
   list-style: none;
   width: 100%;
 
-  display: flex;
-  flex-direction: column;
+  /*display: flex;
+  /*flex-direction: column;*/
   align-items: center;
 
-  position: absolute;
+  /*position: absolute;
   top: 66px;
-  right: 0;
+  right: 0;*/
 
   margin: 0;
   padding: 0;
 
   border-bottom: solid 1px #ededed;
 
-  display: none;
+  /*display: none;*/
 }
 
 .main-nav__toggle {
@@ -28,18 +28,16 @@
 }
 
 .main-nav__item {
-  width: 100%;
+  width: 320px;
 }
 
-.main-nav__link { /*Почему для блочного элемента, сработало правило для строчного элемента text-align?*/
-  @main-nav__link-height: 65px;
-
+.main-nav__link {
   color: #111111;
 
   display: block;
-  height: @main-nav__link-height;
+  height: 65px;
   text-align: center;
-  line-height: @main-nav__link-height; /*для центрирования по вертикали*/
+  line-height: 65px; /* =высоте для центрирования по вертикали*/
 }
 
 .main-nav__link:first-child {
