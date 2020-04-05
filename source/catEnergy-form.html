@@ -41,6 +41,7 @@
         <h1 class="page-main__title">Подбор программы</h1>
 
         <form class="form" method="get" action="https://echo.htmlacademy.ru">
+
           <div class="form__inner">
           <p class="form__item">Заполните анкету и мы подберем программу питания для вашего кота</p>
 
@@ -60,6 +61,7 @@
           </fieldset>
           </div>
 
+          <div class="form__inner form__inner--border">
           <fieldset class="form__module">
             <ul class="filter">
               <li class="field-radio">
@@ -76,11 +78,12 @@
               </li>
             </ul>
           </fieldset>
-
-
+          </div>
 
           <fieldset class="form__module">
             <legend class="form__title">Контактные данные (владельца кота)</legend>
+            <div class="form__inner">
+
             <div class="field-text">
               <label class="field-text__label" for="mail">E-mail:*</label>
               <input class="field-text__input" id="mail" type="email" name="mail" placeholder="kuklachev@gmail.com">
@@ -89,15 +92,20 @@
               <label class="field-text__label" for="phone">Телефон:*</label>
               <input class="field-text__input" id="phone" name="telephone"  type="tel" placeholder="8 (960) 900-60-90" maxlength="17">
             </div>
+
+            </div>
           </fieldset>
 
           <div class="form__module">
-            <h3 class="form__title">Комментарий</h3>
+            <span class="form__title">Комментарий</span>
+            <div class="form__inner">
             <textarea class="form__comment" name="comment" id="">Расскажите обо всех повадках кота</textarea>
+            </div>
           </div>
 
           <fieldset class="form__module">
             <legend class="form__title">Дополнительно</legend>
+            <div class="form__inner">
             <ul class="filter-extra">
               <li class="field-checkbox">
                 <input class="field-checkbox__input" type="checkbox" name="sugar-substitute" id="extra1" checked>
@@ -116,9 +124,10 @@
                 <label class="field-checkbox__label" for="extra4">Витамины</label>
               </li>
             </ul>
+            </div>
           </fieldset>
 
-          <button class="button button-form" type="submit">Отправить заявку</button>
+          <button class="button button--form" type="submit">Отправить заявку</button>
           <span class="form__hint"> * - Обязательные поля</span>
 
         </form>
