@@ -3,10 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>Магазин функционального питания для котов "Кэт энерджи"</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
 
     <header class="page-header">
+      <div class="page-header__inner">
 
       <a class="page-heade__logo">
         <img class="page-header__logo-image" src="img/logotype-header-mobile.svg" width="191" height="39" alt="Магазин «Кэт энерджи»">
@@ -14,10 +17,14 @@
 
       <nav class="main-nav">
         <button class="main-nav__toggle burger" type="button">
-          <span>Открыть меню</span>
-          <span></span>
-        </button>
+          <!--<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 18" style="enable-background:new 0 0 24 18;" xml:space="preserve">
+            <rect y="16" width="24" height="2"/>
+            <rect y="8" width="24" height="2"/>
+            <rect width="24" height="2"/>
+          </svg>-->
 
+          <span>открыть/закрыть</span>
+        </button>
 
           <ul class="main-nav__list">
             <li class="main-nav__item">
@@ -33,20 +40,25 @@
 
       </nav>
 
+    </div>
     </header>
 
     <main class="page-main">
+      <div class="page-main__inner">
+
       <section class="commercial">
-        <h1 class="commercial__title">Функциональное питание для котов</h1>
-        <p class="commercial__slogan">Занялся собой? Займись котом!</p>
-        <div class="commercial__box"><img class="commercial__product-image" src="" width="280" height="270" alt="Банка корма для котов - курица">
+        <div class="commercial__inner">
+          <h1 class="commercial__title">Функциональное питание для котов</h1>
+          <p class="commercial__slogan">Занялся собой? Займись котом!</p>
+          <div class="commercial__box"><img class="commercial__product-image" src="img/index-can-mobile@1x.png" width="280" height="270" alt="Банка корма для котов - курица">
+          </div>
         </div>
         <a class="commercial__button button" href="catEnergy-form.html">Подобрать программу</a>
       </section>
 
 
       <section class="program">
-        <div class="program__container">
+        <div class="program__inner">
           <h2 class="visually-hidden">Программы питания</h2>
           <article class="program__item">
             <h3 class="program__title">Похудение</h3>
@@ -64,7 +76,7 @@
 
 
       <section class="features">
-        <div class="features__container"></div>
+        <div class="features__inner">
           <h2 class="features__title">Как это работает</h2>
 
           <ul class="features__list">
@@ -84,35 +96,44 @@
         </div>
       </section>
 
+      </div>
 
       <section class="example">
-        <h2 class="example__title">Живой пример</h2>
-        <p class="example__story">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+        <div class="example__inner">
 
-        <div class="example__container">
-          <div class="example__box">
-            <span class="example__item">5 кг</span>
-            <span class="example__item">Снижение веса</span>
-          </div>
-          <div class="example__box">
-            <span class="example__item">60 дней</span>
-            <span class="example__item">Затрачено времени</span>
-          </div>
-        </div>
-        <div class="example__costs">Затраты на питание: 15 000 руб.</div>
+          <h2 class="example__title">Живой пример</h2>
+          <p class="example__story">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
 
-        <!--разобраться со слайдером-->
-        <div class="example__progress">
-          <button class="example__button button " type="button">Было</button>
-          <div id="comparison">
-            <figure>
-              <div id="handle"></div>
-              <div id="divisor"></div>
-            </figure>
-            <!--type="range" - нет кроссбраузерности-->
-            <input type="range" min="0" max="100" value="50" id="slider">
+          <div class="example__container">
+            <div class="example__box">
+              <span class="example__value">5 кг</span>
+              <span class="example__item">cнижение веса</span>
+            </div>
+            <div class="example__box">
+              <span class="example__value">60 дней</span>
+              <span class="example__item">затрачено времени</span>
+            </div>
           </div>
-          <button class="example__button button " type="button">Стало</button>
+          <div class="example__costs">Затраты на питание: 15 000 руб.</div>
+
+          <!--разобраться со слайдером-->
+          <div class="example__progress">
+
+            <div class="example__inner">
+              <button class="example__button" type="button">Было</button>
+              <div id="comparison">
+                <figure>
+                  <div id="handle"></div>
+                  <div id="divisor"></div>
+                </figure>
+                <!--type="range" - нет кроссбраузерности-->
+                <input type="range" min="0" max="100" value="50" id="slider">
+              </div>
+              <button class="example__button" type="button">Стало</button>
+            </div>
+
+          </div>
+
         </div>
       </section>
           <!--<figure>
@@ -130,19 +151,23 @@
 
 
         <section class="contacts">
-          <h2 class="visually-hidden">Как до нас добраться</h2>
-            <div class="contacts__box">
-              <p class="contacts__invite">Приглашаем к сотрудничеству дилеров!</p>
-              <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
-            </div>
-
-            <div class="map" style="height: 300px;"> <!--высота временно, мне так удобнее--></div>
+          <div class="contacts__inner">
+            <h2 class="visually-hidden">Как до нас добраться</h2>
+              <div class="contacts__box">
+                <p class="contacts__invite">Приглашаем к сотрудничеству дилеров!</p>
+                <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+              </div>
+          </div>
+          <div class="map"></div>
         </section>
+
+
 
 
     </main>
 
     <footer class="page-footer">
+      <div class="page-footer__inner">
 
       <a class="page-footer__logo-footer">
         <img class="page-footer__logo-image" src="img/logotype-footer-mobile.svg" width="128" height="24" alt="Магазин «Кэт энерджи»">
@@ -150,13 +175,13 @@
 
         <ul class="social">
           <li class="social__item">
-            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy" aria-label="Мы в Вконтакте"></a>
+            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy" aria-label="Мы в Вконтакте">vk</a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy" aria-label="Мы в Фейсбуке"></a>
+            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy" aria-label="Мы в Фейсбуке">fb</a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy" aria-label="Мы в Инстаграме"></a>
+            <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy" aria-label="Мы в Инстаграме">insta</a>
           </li>
         </ul>
 
@@ -167,6 +192,7 @@
           </a>
         </article>
 
+      </div>
     </footer>
 
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp"></script>
