@@ -1,4 +1,10 @@
-.copyright__link  {
+.copyright {
+  @media (min-width: @tablet-width) {
+    width: 165px;
+  }
+}
+
+.copyright__link {
   color: #444444;
 
   display: flex;
@@ -7,6 +13,10 @@
   height: 77px;
   align-items: center;
   border-top: solid 1px rgba(0, 0, 0, 0.1);
+
+  @media (min-width: @tablet-width) {
+    border: 0;
+  }
 }
 
 .copyright__text {

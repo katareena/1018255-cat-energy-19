@@ -7,6 +7,18 @@
   padding-left: 20px;
   padding-right: 20px;
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: rgb(255, 167, 136);
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+    .desktop-padding();
+  }
 }
 
 .example__title {
@@ -14,6 +26,11 @@
   line-height: 60/36;
   color: #111111;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 1;
+  }
 }
 
 .example__story {
@@ -22,6 +39,13 @@
   margin: 0;
   margin-top: 33px;
   margin-bottom: 27px;
+}
+
+.example__parameters {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .example__box {
@@ -48,7 +72,6 @@
   line-height: 1;
   display: block;
   width: 57px;
-
 }
 
 .example__costs {
@@ -58,40 +81,13 @@
 
   width: 190px;
   margin: 0 auto;
-}
 
-@media (min-width: @tablet-width) {
-  .example__inner {
-    width: @tablet-width;
-    padding-left: 30px;
-    padding-right: 30px;
-    background-color: rgb(255, 167, 136);
-  }
-
-  .example__title {
-    font-size: 60px;
-    line-height: 1;
-    }
-
-  .example__parameters {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .example__costs {
+  @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 1;
 
     width: 174px;
     margin: 0;
     text-align: right;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .example__inner {
-    width: @desktop-width;
-    padding-left: 40px;
-    padding-right: 40px;
   }
 }

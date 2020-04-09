@@ -1,6 +1,15 @@
 .contacts {
   width: 100%;
-  height: 414px;
+  height: 476px;
+
+  @media (min-width: @tablet-width) {
+    height: 601px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 400px;
+    position: relative;
+  }
 }
 
 .contacts--notIndex {
@@ -10,6 +19,14 @@
 .contacts__inner {
   width: 320px;
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+  }
 }
 
 .contacts__box {
@@ -20,70 +37,15 @@
 
   display: flex;
   justify-content: space-between;
-}
 
-.contacts__invite {
-  font-size: 16px;
-  line-height: 20/16;
-  color: #111111;
-  text-transform: uppercase;
-
-  margin: 0;
-  flex: 0 0 50%;
-}
-
-.contacts__address {
-  font-family: @alternate-font;
-  line-height: 20/14;
-
-  margin: 0;
-  flex: 0 0 50%;
-}
-
-@media (min-width: @tablet-width) {
-  .contacts {
-    height: 600px;
-  }
-
-  .contacts__inner {
-    width: @tablet-width;
-  }
-
-  .contacts__box {
+  @media (min-width: @tablet-width) {
     padding-left: 71px;
     padding-right: 71px;
     padding-top: 69px;
     padding-bottom: 62px;
   }
 
-  .contacts__invite {
-    font-size: 20px;
-    line-height: 25/20;
-
-    flex-basis: 155px;
-    margin-left: 40px;
-  }
-
-  .contacts__address {
-    font-size: 16px;
-    line-height: 20/16;
-
-    flex-basis: 155px;
-    margin-right: 40px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .contacts {
-    height: 400px;
-    position: relative;
-  }
-
-  .contacts__inner {
-    width: @desktop-width;
-  }
-
-  .contacts__box {
+  @media (min-width: @desktop-width) {
     width: 570px;
     height: 200px;
     background-color: #ffffff;
@@ -96,12 +58,44 @@
     padding-top: 66px;
     padding-bottom: 59px;
   }
+}
 
-  .contacts__invite {
-    margin-left: 0;
+.contacts__invite {
+  font-size: 16px;
+  line-height: 20/16;
+  color: #111111;
+  text-transform: uppercase;
+
+  margin: 0;
+  flex: 0 0 50%;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 25/20;
+
+    flex-basis: 155px;
   }
 
-  .contacts__address {
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
+  }
+}
+
+.contacts__address {
+  font-family: @alternate-font;
+  line-height: 20/14;
+
+  margin: 0;
+  flex: 0 0 50%;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 20/16;
+
+    flex-basis: 155px;
+  }
+
+  @media (min-width: @desktop-width) {
     margin-right: 0;
   }
 }

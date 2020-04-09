@@ -8,6 +8,30 @@
   text-transform: uppercase;
   cursor: pointer;
   width: 280px;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    margin-bottom: 0;
+    margin-top: auto;
+  }
+}
+
+.button--commercial {
+  width: 280px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 280px;
+    position: absolute;
+    top: 286px;
+    left: 119px;
+  }
+}
+
+.button--extra {
+  @media (min-width: @desktop-width) {
+    width: 245px;
+  }
 }
 
 .button--show {

@@ -1,5 +1,6 @@
 .page-header {
   width: 100%;
+  z-index: 999999;
 }
 
 .page-header__inner {
@@ -15,28 +16,22 @@
   padding-right: 20px;
 
   margin: 0 auto;
-}
 
-@media (min-width: @tablet-width) {
-  .page-header__inner {
+  @media (min-width: @tablet-width) {
     width: @tablet-width;
     min-height: 60px;
   }
 
-  .page-header__logo {
-    display: flex;
-    vertical-align: middle;
-  }
-}
 
-@media (min-width: @desktop-width) {
-  .page-header__inner {
+  @media (min-width: @desktop-width) {
     width: @desktop-width;
     background-color: green;
   }
+}
 
-  .page-header__inner:before {
-  background-image: url("../img/index-background-mobile@1x.jpg");
-  background-repeat: no-repeat;
+@media (min-width: @tablet-width) {
+  .page-header__logo {
+    display: flex;
+    vertical-align: middle;
   }
 }
