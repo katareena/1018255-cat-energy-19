@@ -1,6 +1,15 @@
 .contacts {
   width: 100%;
-  min-height: 414px;
+  /*height: 476px;*/
+
+  @media (min-width: @tablet-width) {
+    /*height: 601px;*/
+  }
+
+  @media (min-width: @desktop-width) {
+    /*height: 400px;*/
+    position: relative;
+  }
 }
 
 .contacts--notIndex {
@@ -10,6 +19,14 @@
 .contacts__inner {
   width: 320px;
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+  }
 }
 
 .contacts__box {
@@ -20,6 +37,27 @@
 
   display: flex;
   justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 71px;
+    padding-right: 71px;
+    padding-top: 69px;
+    padding-bottom: 62px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 570px;
+    height: 200px;
+    background-color: #ffffff;
+    position: absolute;
+    z-index: 6000;
+    top: 100px;
+
+    padding-left: 76px;
+    padding-right: 90px;
+    padding-top: 66px;
+    padding-bottom: 59px;
+  }
 }
 
 .contacts__invite {
@@ -29,7 +67,18 @@
   text-transform: uppercase;
 
   margin: 0;
-  flex: 0 0 50%
+  flex: 0 0 50%;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 25/20;
+
+    flex-basis: 155px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
+  }
 }
 
 .contacts__address {
@@ -37,5 +86,16 @@
   line-height: 20/14;
 
   margin: 0;
-  flex: 0 0 50%
+  flex: 0 0 50%;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 20/16;
+
+    flex-basis: 155px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 0;
+  }
 }

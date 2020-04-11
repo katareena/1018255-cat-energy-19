@@ -1,15 +1,40 @@
 .form {
   width: 100%; /*320 от page-main__inner*/
   margin-bottom: 34px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 72px;
+    padding-left: 40px;
+    padding-right: 37px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 82px;
+  }
 }
 
 .form__inner {
-  padding-left: 20px;
-  padding-right: 20px;
-  background-color: coral;
-
+  .mobile-padding();
   list-style: none;
   margin: 0;
+
+  background-color: coral;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    .desktop-padding();
+  }
+}
+
+.form__inner--extra {
+  @media (min-width: @tablet-width) {
+    min-height: 115px;
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .form__title {
@@ -25,6 +50,13 @@
   margin-bottom: 30px;
 
   width: 185px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    width: 530px;
+    margin-left: 0;
+    /*марджины везде разные////*/
+  }
 }
 
 .form__item {
@@ -32,6 +64,13 @@
   color: #111111;
   margin-bottom: 20px;
   margin-top: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30/20;
+    width: 322px;
+    margin-bottom: 69px;
+  }
 }
 
 .form__module {
@@ -40,8 +79,27 @@
   padding: 0;
 }
 
-.form__inner--border {
-  border: solid 1px rgba(0, 0, 0, 0.1);
+.form__inner--setting {
+  @media (min-width: @desktop-width) {
+    flex: 0 0 50%;
+    margin-right: 40px;
+    background-color: coral;
+  }
+}
+
+.form__inner--radio {
+  border: solid 1px /* rgba(0, 0, 0, 0.1);*/ black;
+
+  @media (min-width: @desktop-width) {
+    flex: 0 1 50%;
+  }
+}
+
+.form__inner--contacts {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-around;
+  }
 }
 
 .form__comment {
@@ -49,8 +107,29 @@
   line-height: 18/16;
   text-transform: uppercase;
 
-  width: 280px;
+  width: 100%;
   min-height: 150px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30/20;
+  }
+}
+
+.form__box1 {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.form__box2 {
+  @media (min-width: @tablet-width) {
+    padding-top: 54px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .form__hint {
@@ -58,6 +137,18 @@
   line-height: 16/14;
   color: #444444;
   display: inline-block;
-  width: inherit;
+  width: 100%;
   text-align: center;
+
+
+  @media (min-width: @tablet-width) {
+    width: 283px;
+    font-size: 16px;
+    line-height: 1;
+    text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-grow: 1;
+  }
 }

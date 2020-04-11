@@ -2,8 +2,14 @@
   min-height: 505px;
   color: #ffffff;
   text-align: center;
-  /*display: flex;
-  flex-direction: column;*/
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 80px;
+  }
 }
 
 .commercial__inner {
@@ -12,31 +18,98 @@
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    min-height: 843px;
+
+    background-image: none;
+    background-color: #ffffff;
+
+    padding-top: 61px;
+
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: rgb(252, 180, 155);
+  }
+}
+
+.commercial__inner::before {
+  @media (min-width: @desktop-width) {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 720px;
+    height: 696px;
+
+    background-image: url("../img/index-background-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: translateX(649px) translateY(-60px);
+    z-index: 1;
+
+  }
 }
 
 .commercial__title {
-  margin-top: 0;
-  padding-top: 39px;
   font-size: 36px;
   line-height: 1;
+
+  margin-top: 0;
+  padding-top: 39px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 1;
+    color: #111111;
+
+    margin-top: 0;
+    margin-bottom: 33px;
+    margin-left: 120px;
+
+    padding-top: 0;
+    width: 480px;
+    text-align: left;
+  }
 }
 
 .commercial__slogan {
   line-height: 1;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 1;
+    color: #111111;
+    text-align: left;
+
+    margin: 0;
+    margin-left: 120px;
+  }
 }
 
 .commercial__box {
   width: 280px;
   height: 270px;
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 709px;
+    height: 609px;
+    background-color: coral;
+    z-index: 999999;
+  }
 }
 
 .commercial__button {
   width: 280px;
   margin: 0 auto;
-  /*margin-top: auto;
-  margin-bottom: 22px;
-  margin-left: 20px;
-  margin-right: 20px;*/
+
+  @media (min-width: @tablet-width) {
+    width: 280px;
+    position: absolute;
+    top: 286px;
+    left: 119px;
+  }
 }

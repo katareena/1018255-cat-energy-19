@@ -1,5 +1,13 @@
 .field-checkbox {
+  @media (min-width: @tablet-width) {
 
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-basis: 25%;
+  }
 }
 
 .field-checkbox__input {
@@ -12,4 +20,9 @@
   color: #222222;
   text-transform: uppercase;
   cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 1;
+  }
 }

@@ -1,5 +1,6 @@
 .page-header {
   width: 100%;
+  z-index: 999999;
 }
 
 .page-header__inner {
@@ -11,13 +12,29 @@
   justify-content: space-between;
   flex-wrap: wrap;
   padding-top: 13px;
-  padding-left: 20px;
-  padding-right: 20px;
 
   margin: 0 auto;
 
-  /*position: relative;*/
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+    .tablet-padding();
+    min-height: 60px;
+  }
 
-  /*background-color: green; /*временно*/
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+    .desktop-padding();
+    background-color: green;
+  }
 }
 
+.page-header__logo {
+  margin-left: 20px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    vertical-align: middle;
+    margin-left: 0;
+  }
+}
