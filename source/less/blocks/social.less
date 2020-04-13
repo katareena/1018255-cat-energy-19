@@ -14,7 +14,39 @@
   }
 }
 
-.copyright__pic {
-  height: 34px;
-  width: 27px;
+.social__link {
+  position: relative;
+}
+
+.social__link--vkontakte::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 0;
+  width: 22px;
+  height: 12px;
+  background-image: url("../img/icon-vk.svg");
+  background-repeat: no-repeat;
+}
+
+.social__link--instagram::before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: -5px;
+  width: 17px;
+  height: 17px;
+  background-image: url("../img/icon-insta.svg");
+  background-repeat: no-repeat;
+}
+
+.social__link--facebook::before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: -10px;
+  width: 10px;
+  height: 19px;
+  background-image: url("../img/icon-fb.svg");
+  background-repeat: no-repeat;
 }

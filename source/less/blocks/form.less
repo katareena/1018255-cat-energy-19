@@ -34,6 +34,10 @@
     min-height: 115px;
     display: flex;
     flex-wrap: wrap;
+
+    @media (min-width: @desktop-width) {
+      padding: 0;
+    }
   }
 }
 
@@ -109,6 +113,9 @@
 
   width: 100%;
   min-height: 150px;
+  resize: none;
+
+  padding: 14px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;

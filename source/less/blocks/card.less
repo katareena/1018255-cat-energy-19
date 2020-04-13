@@ -70,7 +70,7 @@
 .card__description {
   font-family: @alternate-font;
   font-size: 12px;
-  line-height: 16/12; /*не помещается при высот*/
+  line-height: 16/12;
   width: 100%;
 
   @media (min-width: @tablet-width) {
@@ -99,11 +99,39 @@
   align-items: center;
   padding-top: 83px;
 
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 27px;
+    left: 145px;
+    width: 31px;
+    height: 31px;
+    background-image: url("../img/icon-plus.svg");
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    background-position: center;
+  }
+
   @media (min-width: @tablet-width) {
     background-color: #ffffff;
     border: solid 1px #cdcdcd;
     padding-top: 166px;
     align-items: center;
+
+    &::before {
+      top: 55px;
+      left: 131px;
+      width: 61px;
+      height: 61px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &::before {
+      left: 93px;
+    }
   }
 }
 

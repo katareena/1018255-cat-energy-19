@@ -28,6 +28,7 @@
   min-height: 266px;
   .mobile-padding();
   margin-bottom: 20px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     background-color: #f2f2f2;
@@ -50,9 +51,94 @@
   }
 }
 
+.program__item::before {
+  content: "";
+  position: absolute;
+  top: 24px;
+  left: 22px;
+
+  width: 50px;
+  height: 50px;
+  background-color: #68b738;
+  border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    top: 92px;
+    left: auto;
+    right: 62px;
+    width: 200px;
+    height: 200px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 47px;
+    left: 52px;
+    right: auto;
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.program__item--slim::after {
+  content: "";
+  position: absolute;
+
+  top: 22px;
+  left: 30px;
+  width: 35px;
+  height: 49px;
+  background-image: url("../img/icon-cat-slim.svg");
+  background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    top: 80px;
+    left: auto;
+    right: 92px;
+    width: 141px;
+    height: 194px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 41px;
+    left: 65px;
+    right: auto;
+    width: 71px;
+    height: 97px;
+  }
+}
+
+.program__item--pro::after {
+  content: "";
+  position: absolute;
+
+  top: 35px;
+  left: 13px;
+  width: 67px;
+  height: 28px;
+  background-image: url("../img/icon-cat-pro.svg");
+  background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    top: 135px;
+    left: auto;
+    right: 28px;
+    width: 268px;
+    height: 113px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 69px;
+    left: 34px;
+    right: auto;
+    width: 134px;
+    height: 57px;
+  }
+}
+
 .program__title {
   font-size: 24px;
   line-height: 37/24;
+  font-weight: 400;
   color: #111111;
   text-transform: uppercase;
 
@@ -105,10 +191,29 @@
 
   margin-top: auto;
   margin-bottom: 0;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 1;
     border: none;
+  }
+}
+
+.program__link::after {
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: 86px;
+
+  width: 25px;
+  height: 12px;
+  background-image: url("../img/icon-right-arrow-long.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-width: @tablet-width) {
+    top: 26px;
+    left: 130px;
   }
 }

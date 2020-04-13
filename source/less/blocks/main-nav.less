@@ -4,6 +4,13 @@
   }
 }
 
+.main-nav {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    align-items: center;
+  }
+}
+
 .main-nav__list {
   font-size: 20px;
   line-height: 1;
@@ -17,6 +24,7 @@
   @media (min-width: @tablet-width) {
     font-size: 18px;
     line-height: 25/18;
+    font-weight: 400;
     color: #222222;
 
     min-width: 440px;
@@ -56,6 +64,13 @@
   @media (min-width: @desktop-width) {
     font-size: 20px;
     line-height: 25/20;
+  }
+}
+
+.main-nav__link--index {
+  @media (min-width: @desktop-width) {
+    font-size: 20px;
+    line-height: 25/20;
     color: #ffffff;
   }
 }
@@ -65,5 +80,41 @@
 
   @media (min-width: @tablet-width) {
     border: 0;
+  }
+}
+
+.main-nav__link:hover {
+  @media (min-width: @tablet-width) {
+    color: rgba(17, 17, 17, 0.6);
+  }
+}
+
+.main-nav__link--index:hover {
+  @media (min-width: @desktop-width) {
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+.main-nav__link:active {
+  @media (min-width: @tablet-width) {
+    color: rgba(17, 17, 17, 0.3);
+  }
+}
+
+.main-nav__link--index:active {
+  @media (min-width: @desktop-width) {
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.main-nav__link:visited {
+  @media (min-width: @tablet-width) {
+    border-bottom: solid 2px #68b738;
+  }
+}
+
+.main-nav__link--index:visited {
+  @media (min-width: @desktop-width) {
+    border-bottom: solid 2px #ffffff;
   }
 }

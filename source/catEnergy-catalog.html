@@ -11,8 +11,12 @@
     <header class="page-header">
       <div class="page-header__inner">
 
-        <a class="page-heade__logo" href="index.html">
-          <img class="page-header__logo-image" src="img/logo-mobile.svg" width="191" height="39" alt="Магазин «Кэт энерджи»">
+        <a class="page-header__logo">
+          <picture class="page-header__logo-image">
+            <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg"/>
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg"/>
+            <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="Магазин «Кэт энерджи»" width="191" height="39"/>
+          </picture>
         </a>
 
         <nav class="main-nav">
@@ -48,7 +52,14 @@
 
             <article class="card">
               <div class="card__inner">
-                <div class="card__img"><img class="" src="img/chicken-small-mobile@1x.jpg" width="140" height="144" alt="Банка корма для котов"></div>
+                <div class="card__img">
+                  <!--<img class="" src="img/chicken-small-mobile@1x.jpg" width="140" height="144" alt="Банка корма для котов">-->
+                  <picture class="">
+                    <source media="(min-width: 1300px)" srcset="img/chicken-small-desktop@1x.jpg"/>
+                    <source media="(min-width: 768px)" srcset="img/chicken-small-tablet@1x.jpg"/>
+                    <img class="" src="img/chicken-small-mobile@1x.jpg" alt="Банка корма для котов" width="140" height="144"/>
+                  </picture>
+                </div>
 
                 <div class="card__content">
                   <h3 class="card__title">
@@ -187,7 +198,7 @@
 
         <section class="extra">
           <div class="extra__inner">
-          <h2 class="extra__title">Дополнительные товары</h2>
+          <h2 class="extra__title"><span class="form__title-text">Дополнительно</span></h2>
 
             <div class="extra__container">
               <div class="extra__box">
@@ -195,9 +206,9 @@
                 <div class="extra-item__inner">
                   <span class="extra-item__title">Сахарозаменитель</span>
                   <table class="extra-item__description">
-                    <tr class="card__line">
-                      <td>1 упаковка (100 г)</td>
-                      <td>200 p.</td>
+                    <tr class="card__line-extra">
+                      <td class="card__description-left">1 упаковка (100 г)</td>
+                      <td class="card__description-right">200 p.</td>
                     </tr>
                   </table>
                 </div>
@@ -208,9 +219,9 @@
                 <div class="extra-item__inner">
                   <span class="extra-item__title">Питьевая вода</span>
                   <table class="extra-item__description">
-                    <tr class="card__line">
-                      <td>5 литров</td>
-                      <td>200 p.</td>
+                    <tr class="card__line-extra">
+                      <td class="card__description-left">5 литров</td>
+                      <td class="card__description-right">200 p.</td>
                     </tr>
                   </table>
                 </div>
@@ -253,13 +264,13 @@
 
         <ul class="social">
           <li class="social__item">
-            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy" aria-label="Мы в Вконтакте">vk</a>
+            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy" aria-label="Мы в Вконтакте"></a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy" aria-label="Мы в Фейсбуке">fb</a>
+            <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy" aria-label="Мы в Инстаграме"></a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy" aria-label="Мы в Инстаграме">insta</a>
+            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy" aria-label="Мы в Фейсбуке"></a>
           </li>
         </ul>
 
