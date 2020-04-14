@@ -15,9 +15,15 @@
   }
 }
 
-.page-header__inner--form {
+.page-main__inner--form {
+  .mobile-padding();
+
   @media (min-width: @tablet-width) {
     .tablet-padding();
+  }
+
+  @media (min-width: @desktop-width) {
+    .desktop-padding();
   }
 }
 
@@ -29,6 +35,7 @@
   margin-top: 23px;
   margin-bottom: 30px;
   margin-right: auto;
+  margin-left: 20px;
 
   @media (min-width: @tablet-width) {
     font-size: 60px;
@@ -44,8 +51,6 @@
 }
 
 .page-main__title--form {
-  margin-left: 0;
-
   @media (min-width: @desktop-width) {
     margin-left: 40px;
   }

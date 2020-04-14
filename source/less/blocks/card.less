@@ -35,19 +35,29 @@
   display: flex;
 
   @media (min-width: @tablet-width) {
-    flex-direction: column;
-    justify-content: space-between;
+    display: block;
+    //flex-direction: column;
+    position: relative;
   }
 }
 
-.card__img {
+.card__box {
   flex: 0 0 50%;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    bottom: 230px;
+  }
 }
 
 .card__content {
   flex: 0 0 50%;
   padding-top: 18px;
   padding-bottom: 18px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 165px;
+  }
 }
 
 .card__title {
@@ -90,7 +100,9 @@
 
 .card__line {
   @media (min-width: @tablet-width) {
+
     border-bottom: solid 3px rgba(0, 0, 0, 0.1);
+    border-collapse: collapse;
     line-height: 32px;
   }
 }

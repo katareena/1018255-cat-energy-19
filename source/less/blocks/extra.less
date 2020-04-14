@@ -46,30 +46,20 @@
   }
 }
 
-.form__title-text {
+.extra__title-text {
   position: relative;
 
   @media (min-width: @tablet-width) {
     margin-left: 38px;
 
     &::before {
-      display: block;
-      width: 3000px;
-      content: "";
-      position: absolute;
-      border-bottom: 3px solid #68b738;
-      top: 60%;
-      right: 248px;
+      .title-decor-line();
+      right: calc(100% + 40px);
     }
 
     &::after {
-      display: block;
-      width: 5000px;
-      content: "";
-      position: absolute;
-      border-bottom: 3px solid #68b738;
-      top: 60%;
-      left: 248px;
+      .title-decor-line();
+      left: calc(100% + 40px);
     }
   }
 

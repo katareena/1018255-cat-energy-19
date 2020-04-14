@@ -19,6 +19,15 @@
   }
 }
 
+.button:hover {
+  background-color: #5eaa2f;
+}
+
+.button:active {
+  background-color: #5eaa2f;
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .button--commercial {
   width: 280px;
   margin: 0 auto;
@@ -34,6 +43,10 @@
 .button--card {
   font-size: 16px;
   line-height: 20/16;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+  }
 }
 
 .button--extra {
@@ -53,6 +66,15 @@
   margin-top: auto;
   margin-bottom: 0;
   background-color: #f2f2f2;
+}
+
+.button--show:hover {
+  background-color: #ebebeb;
+}
+
+.button--show:active {
+  background-color: #ebebeb;
+  color: rgba(68, 68, 68, 0.3);
 }
 
 .button--form {

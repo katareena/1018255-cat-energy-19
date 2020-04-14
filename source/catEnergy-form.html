@@ -32,7 +32,7 @@
               <a class="main-nav__link" href="catEnergy-catalog.html">Каталог продукции</a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link" href="catEnergy-form.html">Подбор программы</a>
+              <a class="main-nav__link main-nav__link--visited" href="catEnergy-form.html">Подбор программы</a>
             </li>
           </ul>
         </nav>
@@ -53,15 +53,15 @@
 
           <div class="form__inner form__inner--setting">
           <fieldset class="form__module">
-            <div class="field-text">
+            <div class="field-text field-text--setting">
               <label class="field-text__label" for="name">Имя:*</label>
               <input class="field-text__input" id="name" type="text" name="name" placeholder="Введите имя кота" value="Барсик">
             </div>
-            <div class="field-text">
+            <div class="field-text field-text--setting">
               <label class="field-text__label" for="weight">Вес (кг):*</label>
               <input class="field-text__input" id="weight" name="weight"  type="number" placeholder="Введите вес кота" value="7">
             </div>
-            <div class="field-text">
+            <div class="field-text field-text--setting">
               <label class="field-text__label" for="age">Возраст (лет):</label>
               <input class="field-text__input" id="age" name="age"  type="number" placeholder="Введите возраст кота" value="7">
             </div>
@@ -90,14 +90,14 @@
           </div>
 
           <fieldset class="form__module">
-            <legend class="form__title">Контактные данные (владельца кота)</legend>
+            <legend class="form__title"><span class="form__title-text">Контактные данные (владельца кота)</span></legend>
             <div class="form__inner form__inner--contacts">
 
-            <div class="field-text">
+            <div class="field-text field-text--mail">
               <label class="field-text__label" for="mail">E-mail:*</label>
               <input class="field-text__input field-text__input--mail" id="mail" type="email" name="mail" placeholder="kuklachev@gmail.com">
             </div>
-            <div class="field-text">
+            <div class="field-text field-text--phone">
               <label class="field-text__label" for="phone">Телефон:*</label>
               <input class="field-text__input field-text__input--phone" id="phone" name="telephone"  type="tel" placeholder="8 (960) 900-60-90" maxlength="17">
             </div>
@@ -106,7 +106,7 @@
           </fieldset>
 
           <fieldset class="form__module">
-            <legend class="form__title">Комментарий</legend>
+            <legend class="form__title"><span class="form__title-text">Комментарий</span></legend>
             <div class="form__inner">
             <textarea class="form__comment" name="comment" id="">Расскажите обо всех повадках кота</textarea>
             </div>

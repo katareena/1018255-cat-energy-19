@@ -29,7 +29,12 @@
     .desktop-padding();
     padding-top: 53px;
     padding-bottom: 29px;
-    //background-color: green;
+  }
+}
+
+.page-header__inner--form {
+  @media (min-width: @tablet-width) {
+    .tablet-padding();
   }
 }
 
@@ -41,4 +46,12 @@
     vertical-align: middle;
     margin-left: 0;
   }
+}
+
+.page-header__logo:hover {
+  opacity: 0.8;
+}
+
+.page-header__logo:active {
+  opacity: 0.6;
 }

@@ -1,29 +1,43 @@
 .field-text {
-  background-color: coral;
   padding: 7px 0;
   display: flex;
   width: 100%;
   align-items: center;
 
   @media (min-width: @desktop-width) {
-    padding: 0;
     flex: 0 0 50%;
   }
 }
 
-.field-text:first-child {
+/*.field-text--setting:first-child {
   padding-top: 20px;
+}
 
+.field-text--setting:last-child {
+  padding-bottom: 20px;
+}*/
+
+.field-text--mail,
+.field-text--phone {
   @media (min-width: @desktop-width) {
     padding: 0;
+    margin-right: 40px;
+    margin-left: 40px;
+
   }
 }
 
-.field-text:last-child {
-  padding-bottom: 20px;
-
+.field-text--mail {
   @media (min-width: @desktop-width) {
     padding: 0;
+    flex: 0 0 50%;
+
+  }
+}
+
+.field-text--phone {
+  @media (min-width: @desktop-width) {
+    flex: 0 1 50%;
   }
 }
 
@@ -49,21 +63,25 @@
   cursor: pointer;
 
   flex-grow: 1;
-  height: 45px;
+  padding-top: 16px;
   padding-left: 16px;
-  padding-right: 16px;
+  padding-bottom: 16px;
+  padding-right: 20px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 1;
     padding-left: 22px;
-    padding-right: 22px;
+    padding-right: 62px;
   }
 }
 
 .field-text__input--mail {
-  padding-right: 50px;
-  position: relative;
+  background-image: url("../img/icon-mail.svg");
+  background-repeat: no-repeat;
+  background-position: 512px center;
+
+  /*position: relative;
 
   &::before {
     content: "";
@@ -75,9 +93,5 @@
     height: 14px;
     background-image: url("../img/icon-mail.svg");
     background-repeat: no-repeat;
-  }
-
-  @media (min-width: @tablet-width) {
-    padding-right: 62px;
-  }
+  }*/
 }
