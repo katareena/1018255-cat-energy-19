@@ -51,7 +51,7 @@
       <div class="page-main__inner">
 
       <section class="commercial">
-        <div class="commercial__inner">
+        <div class="commercial__inner commercial__inner--background">
           <h1 class="commercial__title">Функциональное питание для котов</h1>
           <p class="commercial__slogan">Занялся собой? Займись котом!</p>
           <div class="commercial__box">
@@ -132,14 +132,16 @@
 
             <div class="example__content">
               <button class="example__button" type="button">Было</button>
-              <div id="comparison">
-                <figure>
-                  <div id="handle"></div>
-                  <div id="divisor"></div>
+
+              <div class="example__comparison">
+
+                <figure class="example__figure">
+                  <div class="example__divisor" id="divisor"></div>
                 </figure>
-                <!--type="range" - нет кроссбраузерности-->
-                <input type="range" min="0" max="100" value="50" id="slider">
+
+                <input class="example__range" type="range" min="0" max="100" value="50" id="slider" oninput="moveDivisor()">
               </div>
+
               <button class="example__button" type="button">Стало</button>
             </div>
 
@@ -166,7 +168,10 @@
             <h2 class="visually-hidden">Как до нас добраться</h2>
               <div class="contacts__box">
                 <p class="contacts__invite">Приглашаем к сотрудничеству дилеров!</p>
-                <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+                <p class="contacts__address">
+                  <span class="contacts__address-item">ул. Большая Конюшенная, д. 19/8</span>
+                  <span class="contacts__address-item">Санкт-Петербург</span>
+                </p>
               </div>
           </div>
           <div class="map"></div>
@@ -206,6 +211,7 @@
       </div>
     </footer>
 
+    <script src="js/slider.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp"></script>
     <script src="js/map.js"></script>
   </body>
