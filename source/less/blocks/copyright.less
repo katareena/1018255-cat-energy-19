@@ -1,4 +1,6 @@
 .copyright {
+  display: flex;
+
   @media (min-width: @tablet-width) {
     width: 165px;
   }
@@ -24,9 +26,26 @@
   font-size: 16px;
   line-height: 1;
   text-transform: initial;
+  width: 115px;
+  margin-right: 23px;
+}
+
+.copyright__link--pic {
+  color: #666666;
+}
+
+.copyright__link--pic:hover {
+  color: #68b738;
+}
+
+.copyright__link--pic:active {
+  color: rgba(104, 183, 56, 0.3);
+}
+
+.copyright__link--text:active {
+  color: rgba(68, 68, 68, 0.3);
 }
 
 .copyright__pic {
-  height: 50px;
-  width: 43px;
+  fill: currentColor;
 }

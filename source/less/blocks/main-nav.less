@@ -5,10 +5,16 @@
 }
 
 .main-nav {
+  display: none;
+
   @media (min-width: @tablet-width) {
     display: flex;
     align-items: center;
   }
+}
+
+.main-nav--open {
+  display: block;
 }
 
 .main-nav__list {

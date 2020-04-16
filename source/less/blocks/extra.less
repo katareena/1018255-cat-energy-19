@@ -51,16 +51,7 @@
 
   @media (min-width: @tablet-width) {
     margin-left: 38px;
-
-    &::before {
-      .title-decor-line();
-      right: calc(100% + 40px);
-    }
-
-    &::after {
-      .title-decor-line();
-      left: calc(100% + 40px);
-    }
+    .title-decor-line();
   }
 
   @media (min-width: @desktop-width) {

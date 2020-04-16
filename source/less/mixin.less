@@ -20,10 +20,23 @@
 }
 
 .title-decor-line() {
-  display: block;
-  width: 3000px;
-  content: "";
-  position: absolute;
-  border-bottom: 3px solid #68b738;
-  top: 60%;
+  &::before {
+    display: block;
+    width: 100vw;
+    content: "";
+    position: absolute;
+    border-bottom: 3px solid #68b738;
+    top: 60%;
+    left: calc(100% + 40px);
+  }
+
+  &::after {
+    display: block;
+    width: 100vw;
+    content: "";
+    position: absolute;
+    border-bottom: 3px solid #68b738;
+    top: 60%;
+    right: calc(100% + 40px);
+  }
 }

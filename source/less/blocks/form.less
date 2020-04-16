@@ -118,15 +118,7 @@
   position: relative;
 
   @media (min-width: @tablet-width) {
-    &::before {
-      .title-decor-line();
-      right: calc(100% + 40px);
-    }
-
-    &::after {
-      .title-decor-line();
-      left: calc(100% + 40px);
-    }
+    .title-decor-line();
   }
 }
 
