@@ -1,5 +1,5 @@
 .commercial {
-  min-height: 505px;
+  min-height: 500px;
   color: #ffffff;
   text-align: center;
 
@@ -25,11 +25,12 @@
     background-image: none;
     background-color: #ffffff;
 
-    padding-top: 61px;
+    padding-top: 57px;
   }
 
   @media (min-width: @desktop-width) {
     min-height: 554px;
+    padding-top: 80px;
     position: relative;
   }
 }
@@ -71,7 +72,8 @@
   line-height: 1;
 
   margin-top: 0;
-  padding-top: 39px;
+  margin-bottom: 26px;
+  padding-top: 25px;
 
   @media (min-width: @tablet-width) {
     font-size: 60px;
@@ -79,18 +81,24 @@
     color: #111111;
 
     margin-top: 0;
-    margin-bottom: 33px;
-    margin-left: 120px;
+    margin-bottom: 41px;
+    margin-left: 117px;
 
     padding-top: 0;
     width: 480px;
     text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 120px;
   }
 }
 
 .commercial__slogan {
   line-height: 1;
   text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 29px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -99,14 +107,18 @@
     text-align: left;
 
     margin: 0;
-    margin-left: 120px;
+    margin-left: 117px;
     margin-bottom: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 120px;
   }
 }
 
 .commercial__box {
   width: 280px;
-  height: 270px;
+  height: 271px;
   margin: 0 auto;
 
   @media (min-width: @tablet-width) {
@@ -127,21 +139,5 @@
   @media (min-width: @desktop-width) {
     z-index: 2;
     position: relative;
-  }
-}
-
-.commercial__button {
-  width: 280px;
-  margin: 0 auto;
-
-  @media (min-width: @tablet-width) {
-    width: 280px;
-    position: absolute;
-    top: 286px;
-    left: 119px;
-  }
-
-  @media (min-width: @desktop-width) {
-    z-index: 3;
   }
 }

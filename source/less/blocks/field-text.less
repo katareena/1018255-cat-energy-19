@@ -1,23 +1,15 @@
 .field-text {
   padding: 7px 0;
   display: flex;
-  width: 100%;
   align-items: center;
 
   position: relative;
+  width: 280px;
 
   @media (min-width: @desktop-width) {
     flex: 0 0 50%;
   }
 }
-
-/*.field-text--setting:first-child {
-  padding-top: 20px;
-}
-
-.field-text--setting:last-child {
-  padding-bottom: 20px;
-}*/
 
 .field-text--mail,
 .field-text--phone {
@@ -48,6 +40,7 @@
   text-transform: uppercase;
 
   margin-right: 16px;
+  white-space: nowrap;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -61,9 +54,12 @@
   text-transform: uppercase;
   border: solid 1px #cdcdcd;
   cursor: pointer;
-
-  flex-grow: 1;
-  padding: 16px;
+  //flex-grow: 1;
+  padding: 12px;
+  padding-bottom: 13px;
+  //flex-basis: 200px;
+  //flex: 1 1 auto;
+  flex-basis: 150px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -114,7 +110,37 @@
   border: solid 2px #444444;
 }
 
+.field-text__input:invalid {
+  border: solid 2px #ff8282;
+}
+
 .field-text__input:focus + .field-text__mail,
 .field-text__input:focus + .field-text__phone {
   color: #68b738;
+}
+
+.field-text__input:invalid + .field-text__mail,
+.field-text__input:invalid + .field-text__phone {
+  color: #ff8282;
+}
+
+/*для браузера Chrome*/
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/*для браузера Firefox*/
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+input[type="number"]:hover,
+input[type="number"]:focus {
+  -moz-appearance: number-input;
+}
+/*для других*/
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

@@ -30,19 +30,14 @@
   }
 }
 
-//разделю в верные блоки немного позже:
-input[type="checkbox"]:checked,
-input[type="checkbox"]:not(:checked),
-input[type="radio"]:checked,
-input[type="radio"]:not(:checked) {
+.field-checkbox__input:checked,
+.field-checkbox__input:not(:checked) {
   position: absolute;
   left: -9999px;
 }
 
-input[type="checkbox"]:checked + label,
-input[type="checkbox"]:not(:checked) + label,
-input[type="radio"]:checked + label,
-input[type="radio"]:not(:checked) + label {
+.field-checkbox__input:checked + .field-checkbox__label,
+.field-checkbox__input:not(:checked) + .field-checkbox__label {
   display: inline-block;
   position: relative;
   padding-left: 50px;
@@ -50,10 +45,8 @@ input[type="radio"]:not(:checked) + label {
   cursor: pointer;
 }
 
-input[type="checkbox"]:checked + label::before,
-input[type="checkbox"]:not(:checked) + label::before,
-input[type="radio"]:checked + label::before,
-input[type="radio"]:not(:checked) + label::before {
+.field-checkbox__input:checked + .field-checkbox__label::before,
+.field-checkbox__input:not(:checked) + .field-checkbox__label::before {
   content: "";
   position: absolute;
   left: 0;
@@ -64,15 +57,8 @@ input[type="radio"]:not(:checked) + label::before {
   background-color: #ffffff;
 }
 
-input[type="radio"]:checked + label::before,
-input[type="radio"]:not(:checked) + label::before {
-  border-radius: 100%;
-}
-
-input[type="checkbox"]:checked + label::after,
-input[type="checkbox"]:not(:checked) + label::after,
-input[type="radio"]:checked + label::after,
-input[type="radio"]:not(:checked) + label::after {
+.field-checkbox__input:checked + .field-checkbox__label::after,
+.field-checkbox__input:not(:checked) + .field-checkbox__label::after {
   content: "";
   position: absolute;
   //-webkit-transition: all 0.2s ease;
@@ -81,8 +67,8 @@ input[type="radio"]:not(:checked) + label::after {
   transition: all 0.2s ease;
 }
 
-input[type="checkbox"]:checked + label::after,
-input[type="checkbox"]:not(:checked) + label::after {
+.field-checkbox__input:checked + .field-checkbox__label::after,
+.field-checkbox__input:not(:checked) + .field-checkbox__label::after {
   left: 5px;
   top: 6px;
   width: 20px;
@@ -97,22 +83,10 @@ input[type="checkbox"]:not(:checked) + label::after {
   transform: rotate(-45deg);
 }
 
-input[type="radio"]:checked + label::after,
-input[type="radio"]:not(:checked) + label::after {
-  left: 9px;
-  top: 9px;
-  width: 12px;
-  height: 12px;
-  border-radius: 100%;
-  background-color: #68b738;
-}
-
-input[type="checkbox"]:not(:checked) + label::after,
-input[type="radio"]:not(:checked) + label::after {
+.field-checkbox__input:not(:checked) + .field-checkbox__label::after {
   opacity: 0;
 }
 
-input[type="checkbox"]:checked + label::after,
-input[type="radio"]:checked + label::after {
+.field-checkbox__input:checked + .field-checkbox__label::after {
   opacity: 1;
 }

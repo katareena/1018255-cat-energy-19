@@ -4,17 +4,17 @@
   }
 }
 
+.main-nav--open {
+  display: block;
+}
+
 .main-nav {
-  display: none;
+  //display: none;
 
   @media (min-width: @tablet-width) {
     display: flex;
     align-items: center;
   }
-}
-
-.main-nav--open {
-  display: block;
 }
 
 .main-nav__list {
@@ -42,6 +42,7 @@
   @media (min-width: @desktop-width) {
     min-width: 480px;
     z-index: 999999;
+    //height: 50px;
   }
 }
 
@@ -79,6 +80,7 @@
   @media (min-width: @desktop-width) {
     font-size: 20px;
     line-height: 25/20;
+    padding: 10px 0;
   }
 }
 

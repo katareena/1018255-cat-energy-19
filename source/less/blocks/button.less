@@ -2,7 +2,7 @@
   color: #ffffff;
 
   display: inline-block;
-  padding: 13px 0;
+  padding: 11px 0;
   text-align: center;
   vertical-align: top;
 
@@ -16,6 +16,7 @@
     line-height: 1;
     margin-bottom: 0;
     margin-top: auto;
+    padding: 10px 0;
   }
 }
 
@@ -33,16 +34,23 @@
   margin: 0 auto;
 
   @media (min-width: @tablet-width) {
-    width: 280px;
+    width: auto;
+    padding: 16px 27px;
     position: absolute;
-    top: 286px;
+    top: 315px;
     left: 119px;
   }
+
+  /*@media (min-width: @desktop-width) {
+    z-index: 3;
+  }*/
 }
 
 .button--card {
   font-size: 16px;
   line-height: 20/16;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
   @media (min-width: @tablet-width) {
     margin-top: 0;
@@ -52,9 +60,13 @@
 .button--extra {
   font-size: 16px;
   line-height: 20/16;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
   @media (min-width: @desktop-width) {
-    width: 245px;
+    width: auto;
+    padding-left: 92px;
+    padding-right: 92px;
   }
 }
 
