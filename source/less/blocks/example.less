@@ -8,7 +8,7 @@
 
   @media (min-width: @desktop-width) {
     background-image: linear-gradient(#ffffff 22%, #f2f2f2 22%);
-    padding-bottom: 75px;
+    padding-bottom: 67px;
     border: none;
   }
 }
@@ -224,6 +224,8 @@
   }
 }
 
+
+//отправлю в отдельный файл немного позже:
 .slider {
   @media (min-width: @tablet-width) {
     height: 462px;
@@ -292,26 +294,40 @@
 
 .slider__catBefore-img {
   position: absolute;
+  left: 5px;
   bottom: 0;
-  //height: 245px;
-  //width: 120%;
-  background-size: contain;
+  height: 232px;
+  width: 311px;
+
+  @media (min-width: @tablet-width) {
+    height: 499px;
+    width: 676px;
+  }
 
   @media (min-width: @desktop-width) {
     position: absolute;
-    bottom: 0;
+    left: -10px;
+    width: 730px;
   }
 }
 
 .slider__catAfter-img {
   position: absolute;
   bottom: 0;
-  left: 10px;
+  left: 7px;
+  height: 232px;
+  width: 311px;
+
+
+  @media (min-width: @tablet-width) {
+    height: 517px;
+    width: 100%;
+  }
 
   @media (min-width: @desktop-width) {
-    position: absolute;
     bottom: 0;
     left: 30px;
+    //width: 542px;
   }
 }
 

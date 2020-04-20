@@ -27,7 +27,11 @@
     position: absolute;
     border-bottom: 3px solid #68b738;
     top: 60%;
-    left: calc(100% + 35px);
+    left: calc(100% + 20px);
+
+    @media (min-width: @tablet-width) {
+      left: calc(100% + 35px);
+    }
   }
 
   &::after {
@@ -38,5 +42,9 @@
     border-bottom: 3px solid #68b738;
     top: 60%;
     right: calc(100% + 40px);
+
+    @media (min-width: @tablet-width) {
+      right: calc(100% + 40px);
+    }
   }
 }

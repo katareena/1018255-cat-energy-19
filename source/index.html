@@ -143,8 +143,18 @@
           <div class="slider">
             <div class="slider__container">
               <figure class="slider__cat slider__catBefore slider__catAfter">
-                <img class="slider__catBefore-img" src="img/before-desktop@1x.png" width="" height="" alt="Кот ДО функционального питания Кэт энерджи">
-                <img class="slider__catAfter-img" src="img/after-desktop@1x.png" width="" height="" alt="Кот ПОСЛЕ функционального питания Кэт энерджи">
+                <picture class="slider__catBefore-img">
+                  <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png"/>
+                  <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png"/>
+                  <img class="slider__catBefore-img" src="img/before-mobile@1x.png" width="" height="" alt="Кот ДО функционального питания Кэт энерджи">
+                </picture>
+
+                <picture class="slider__catAfter-img">
+                  <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png"/>
+                  <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png"/>
+                  <img class="slider__catAfter-img" src="img/after-mobile@1x.png" width="" height="" alt="Кот ПОСЛЕ функционального питания Кэт энерджи">
+                </picture>
+
               </figure>
               <div class="slider__scale">
                 <button class="slider__button" type="button">Было</button>

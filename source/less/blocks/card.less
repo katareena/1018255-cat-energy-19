@@ -78,7 +78,7 @@
     margin: 0 auto;
     margin-bottom: 17px;
     text-align: center;
-    width: 140px;
+    width: 150px;
   }
 }
 
@@ -99,6 +99,17 @@
   }
 }
 
+.card__description-left,
+.card__description-right {
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+}
+
 .card__description-left {
   text-align: left;
 }
@@ -111,13 +122,21 @@
   text-transform: uppercase;
 }
 
-.card__line {
-  @media (min-width: @tablet-width) {
+.card__img {
+  width: 140px;
+  height: 144px;
 
-    border-bottom: solid 1px rgba(0, 0, 0, 0.1);
-    line-height: 32px;
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: ;
+    height: ;
   }
 }
+
 /*---------------карточка показать больше------------*/
 .card--more {
   align-items: center;

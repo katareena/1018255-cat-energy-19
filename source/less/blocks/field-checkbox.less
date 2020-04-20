@@ -1,8 +1,9 @@
 .field-checkbox {
-  padding: 13px 0;
+  padding: 6px 0;
 
   @media (min-width: @tablet-width) {
-
+    padding-top: 20px;
+    padding-bottom: 20px;
     flex: 0 0 50%;
     max-width: 50%;
   }
@@ -40,9 +41,13 @@
 .field-checkbox__input:not(:checked) + .field-checkbox__label {
   display: inline-block;
   position: relative;
-  padding-left: 50px;
+  padding-left: 45px;
   line-height: 30px;
   cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 55px;
+  }
 }
 
 .field-checkbox__input:checked + .field-checkbox__label::before,
@@ -55,6 +60,23 @@
   height: 30px;
   border: 1px solid #cdcdcd;
   background-color: #ffffff;
+
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.field-checkbox__input:checked:hover + .field-checkbox__label::before,
+.field-checkbox__input:not(:checked):hover + .field-checkbox__label::before {
+  border: 1px solid #bababa;
+}
+
+.field-checkbox__input:checked:active + .field-checkbox__label,
+.field-checkbox__input:not(:checked):active + .field-checkbox__label {
+  opacity: 0.3;
+  transition: none;
 }
 
 .field-checkbox__input:checked + .field-checkbox__label::after,
@@ -81,6 +103,12 @@
   //-o-transform: rotate(-45deg);
   //-ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
+
+  @media (min-width: @tablet-width) {
+    top: 8px;
+    width: 30px;
+    height: 15px;
+  }
 }
 
 .field-checkbox__input:not(:checked) + .field-checkbox__label::after {
