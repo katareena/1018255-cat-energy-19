@@ -36,7 +36,6 @@
 
   @media (min-width: @tablet-width) {
     display: block;
-    //flex-direction: column;
     position: relative;
   }
 }
@@ -46,7 +45,24 @@
 
   @media (min-width: @tablet-width) {
     position: absolute;
-    bottom: 230px;
+    bottom: 206px;
+    width: 324px;
+    left: -39px;
+  }
+
+  @media (min-width: @desktop-width) {
+    bottom: 200px;
+    width: 248px;
+  }
+}
+
+.card__img {
+  width: 140px;
+  height: 144px;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -57,6 +73,10 @@
 
   @media (min-width: @tablet-width) {
     padding-top: 165px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 160px;
   }
 }
 
@@ -120,21 +140,6 @@
 
 .card__description-right--price {
   text-transform: uppercase;
-}
-
-.card__img {
-  width: 140px;
-  height: 144px;
-
-  @media (min-width: @tablet-width) {
-    width: 100%;
-    height: 100%;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: ;
-    height: ;
-  }
 }
 
 /*---------------карточка показать больше------------*/

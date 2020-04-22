@@ -95,9 +95,18 @@
 
 .form__inner--extra {
   @media (min-width: @tablet-width) {
+    padding-right: 0;
+
     min-height: 115px;
+    min-width: 768px;
     display: flex;
     flex-wrap: wrap;
+
+
+    @media (min-width: @desktop-width) {
+      min-width: 1390px;
+      justify-content: flex-start;
+    }
   }
 }
 
@@ -134,6 +143,7 @@
 .form__title-text {
   position: relative;
   .title-decor-line();
+  color: #111111;
 }
 
 .form__title--contacts {
@@ -154,6 +164,7 @@
   margin-top: 20px;
   margin-left: 19px;
   margin-bottom: 35px;
+  color: #444444;
 
   @media (min-width: @tablet-width) {
     margin-top: 58px;
@@ -178,7 +189,7 @@
   @media (min-width: @desktop-width) {
     margin-top: 69px;
     margin-left: 39px;
-    margin-bottom: 40px;
+    margin-bottom: 37px;
   }
 }
 
@@ -186,6 +197,7 @@
   font-size: 16px;
   line-height: 18/16;
   text-transform: uppercase;
+  color: #444444;
 
   width: 100%;
   min-height: 150px;
@@ -229,7 +241,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 3px;
+    padding-top: 5px;
     padding-left: 39px;
     padding-right: 40px;
   }

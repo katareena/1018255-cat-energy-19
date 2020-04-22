@@ -1,19 +1,21 @@
-.main-nav__toggle {
+.main-nav {
   @media (min-width: @tablet-width) {
-    display: none;
+    display: flex;
+    align-items: center;
   }
 }
 
 .main-nav--open {
   display: block;
-}
-
-.main-nav {
-  //display: none;
 
   @media (min-width: @tablet-width) {
     display: flex;
-    align-items: center;
+  }
+}
+
+.main-nav__toggle {
+  @media (min-width: @tablet-width) {
+    display: none;
   }
 }
 
@@ -42,7 +44,6 @@
   @media (min-width: @desktop-width) {
     min-width: 480px;
     z-index: 999999;
-    //height: 50px;
   }
 }
 
@@ -69,7 +70,7 @@
   display: block;
   height: 65px;
   text-align: center;
-  line-height: 65px; /* =высоте для центрирования по вертикали*/
+  line-height: 65px; /* =высотa для центрирования по вертикали*/
 
   @media (min-width: @tablet-width) {
     height: 45px;
