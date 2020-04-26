@@ -31,21 +31,8 @@
 .field-text--phone {
   @media (min-width: @desktop-width) {
     padding: 0;
-    margin-right: 40px;
-    margin-left: 40px;
-  }
-}
-
-.field-text--mail {
-  @media (min-width: @desktop-width) {
-    padding: 0;
-    flex: 1 1 50%;
-  }
-}
-
-.field-text--phone {
-  @media (min-width: @desktop-width) {
-    flex: 1 1 50%;
+    flex-basis: auto;
+    width: 570px;
   }
 }
 
@@ -75,16 +62,21 @@
   padding-bottom: 13px;
   flex: 1 1 auto;
   min-width: 0;
-  color: #444444;
+
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 1;
+    height: 52px;
     padding-left: 22px;
     padding-right: 62px;
     padding-top: 14px;
     padding-bottom: 15px;
   }
+}
+
+.field-text__input::placeholder {
+  color: #444444;
 }
 
 .field-text__input--mail {
@@ -155,28 +147,3 @@
 .field-text__input:invalid + .field-text__phone {
   color: #ff8282;
 }
-
-/*для браузера Chrome
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-для браузера Firefox
-input[type="number"] {
-  -moz-appearance: textfield;
-}
-
-input[type="number"]:hover,
-input[type="number"]:focus {
-  -moz-appearance: number-input;
-}
-
-для других
-
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}*/

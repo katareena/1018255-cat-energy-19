@@ -2,15 +2,13 @@
   padding: 6px 0;
 
   @media (min-width: @tablet-width) {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    flex: 1 1 50%;
-    flex-wrap: wrap;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    width: 287px;
   }
 
   @media (min-width: @desktop-width) {
-    flex: 0 1 auto;
-    min-width: 325px;
+    width: 245px;
   }
 }
 
@@ -48,6 +46,7 @@
 
   @media (min-width: @tablet-width) {
     padding-left: 55px;
+    line-height: 40px;
   }
 }
 
@@ -79,6 +78,12 @@
   opacity: 0.3;
   transition: none;
 }
+
+.field-checkbox__input:checked:focus + .field-checkbox__label::before,
+.field-checkbox__input:not(:checked):focus + .field-checkbox__label::before {
+  border: 2px solid #444444;
+}
+
 
 .field-checkbox__input:checked + .field-checkbox__label::after,
 .field-checkbox__input:not(:checked) + .field-checkbox__label::after {

@@ -16,38 +16,34 @@ function mapInit() {
 }
 
 function mapInit() {
-  const screens = {
+  var screens = {
     sm: 320,
     md: 768,
-    xl: 1300,
+    xl: 1300
   };
-
-  const iconSize = {
+  var iconSize = {
     sm: [62, 53],
     md: [124, 106],
-    xl: [124, 106],
+    xl: [124, 106]
   };
-
-  const iconOffset = {
+  var iconOffset = {
     sm: [-31, -53],
     md: [-62, -106],
-    xl: [-62, -106],
+    xl: [-62, -106]
   };
-
-  const mapCenter = {
+  var mapCenter = {
     sm: [59.938631, 30.323055],
     md: [59.938631, 30.323055],
-    xl: [59.938631, 30.319809],
+    xl: [59.938631, 30.319809]
   };
-
-  const mapZoom = {
+  var mapZoom = {
     sm: 16,
     md: 16,
-    xl: 17,
+    xl: 17
   };
 
   function getScreenSize() {
-    const documentWidth = document.documentElement.clientWidth;
+    var documentWidth = document.documentElement.clientWidth;
 
     if (documentWidth < screens.md) {
       return 'sm';
@@ -60,14 +56,12 @@ function mapInit() {
     return 'xl';
   }
 
-  const screenSize = getScreenSize();
-
-  const map = new ymaps.Map(document.querySelector('.map'), {
+  var screenSize = getScreenSize();
+  var map = new ymaps.Map(document.querySelector('.map'), {
     center: mapCenter[screenSize],
     zoom: mapZoom[screenSize],
-    controls: ['zoomControl'],
+    controls: ['zoomControl']
   });
-
   map.container.fitToViewport();
   map.behaviors.disable('scrollZoom');
 
@@ -76,17 +70,15 @@ function mapInit() {
       iconLayout: 'default#image',
       iconImageHref: 'img/map-pin.png',
       iconImageSize: iconSize[screenWidth],
-      iconImageOffset: iconOffset[screenWidth],
-    })
+      iconImageOffset: iconOffset[screenWidth]
+    });
   }
 
-  let marker = createMarker(screenSize);
-
+  var marker = createMarker(screenSize);
   map.geoObjects.add(marker);
-
-  map.events.add('sizechange', (event) => {
-    const oldWidth = event.get('oldSize')[0];
-    const newWidth = event.get('newSize')[0];
+  map.events.add('sizechange', function (event) {
+    var oldWidth = event.get('oldSize')[0];
+    var newWidth = event.get('newSize')[0];
 
     function updateMarker() {
       map.geoObjects.remove(marker);
