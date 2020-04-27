@@ -1,7 +1,7 @@
 .extra {
   width: 100%; /*320 от page-main__inner*/
-  /*background-color: green; /*временно*/
   margin-bottom: 35px;
+
 
   @media (min-width: @desktop-width) {
 
@@ -11,7 +11,7 @@
 
 .extra__inner {
   width: 100%;
-  padding-top: 30px;
+  padding-top: 28px;
   .mobile-padding();
   margin-left: auto;
   margin-right: auto;
@@ -19,26 +19,49 @@
   @media (min-width: @tablet-width) {
     .tablet-padding();
     margin-bottom: 76px;
+    padding-top: 0;
   }
 
   @media (min-width: @desktop-width) {
     .desktop-padding();
+    padding-top: 5px;
     margin-bottom: 0;
   }
 }
 
 .extra__title {
+  font-weight: 400;
   font-size: 24px;
   line-height: 1;
   color: #111111;
   margin: 0;
   padding: 0;
-  margin-bottom: 30px;
+  margin-bottom: 34px;
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 1;
-    margin-bottom: 75px;
+    margin-bottom: 78px;
+
+    display: block;
+    width: 100vw;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 81px;
+  }
+}
+
+.extra__title-text {
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 38px;
+    .title-decor-line();
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
   }
 }
 
@@ -52,7 +75,7 @@
 .extra__box {
   display: flex;
   flex-direction: column;
-  margin-bottom: 37px;
+  margin-bottom: 40px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 69px;
@@ -61,5 +84,26 @@
   @media (min-width: @desktop-width) {
     width: 895px;
     margin-bottom: 0;
+  }
+}
+
+.extra__amount {
+  text-align: left;
+
+  @media (min-width: @tablet-width) {
+    text-align: right;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: left;
+  }
+}
+
+.extra__price {
+  text-align: right;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    width: 94px;
   }
 }

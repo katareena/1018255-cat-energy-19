@@ -1,3 +1,18 @@
+.main-nav {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.main-nav--open {
+  display: block;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+}
+
 .main-nav__toggle {
   @media (min-width: @tablet-width) {
     display: none;
@@ -12,11 +27,11 @@
   .list-reset();
   width: 100%;
   align-items: center;
-  border-bottom: solid 1px #ededed;
 
   @media (min-width: @tablet-width) {
     font-size: 18px;
     line-height: 25/18;
+    font-weight: 400;
     color: #222222;
 
     min-width: 440px;
@@ -34,9 +49,19 @@
 
 .main-nav__item {
   width: 320px;
+  border-bottom: solid 1px #ededed;
 
   @media (min-width: @tablet-width) {
     width: auto;
+    border: none;
+  }
+}
+
+.main-nav__item:first-child {
+  border-top: solid 1px #ededed;
+
+  @media (min-width: @tablet-width) {
+    border: none;
   }
 }
 
@@ -45,7 +70,7 @@
   display: block;
   height: 65px;
   text-align: center;
-  line-height: 65px; /* =высоте для центрирования по вертикали*/
+  line-height: 65px;
 
   @media (min-width: @tablet-width) {
     height: 45px;
@@ -56,14 +81,54 @@
   @media (min-width: @desktop-width) {
     font-size: 20px;
     line-height: 25/20;
+    padding: 10px 0;
+  }
+}
+
+.main-nav__link--index {
+  @media (min-width: @desktop-width) {
+    font-size: 20px;
+    line-height: 25/20;
     color: #ffffff;
   }
 }
 
-.main-nav__link:first-child {
-  border-top: solid 1px #ededed;
-
+.main-nav__link--visited {
   @media (min-width: @tablet-width) {
-    border: 0;
+    border-bottom: solid 2px #68b738;
+  }
+}
+
+.main-nav__link--visitedIndex {
+  @media (min-width: @tablet-width) {
+    border-bottom: solid 2px #68b738;
+  }
+
+  @media (min-width: @desktop-width) {
+    border-bottom: solid 2px #ffffff;
+  }
+}
+
+.main-nav__link:hover {
+  @media (min-width: @tablet-width) {
+    color: rgba(17, 17, 17, 0.6);
+  }
+}
+
+.main-nav__link--index:hover {
+  @media (min-width: @desktop-width) {
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+.main-nav__link:active {
+  @media (min-width: @tablet-width) {
+    color: rgba(17, 17, 17, 0.3);
+  }
+}
+
+.main-nav__link--index:active {
+  @media (min-width: @desktop-width) {
+    color: rgba(255, 255, 255, 0.3);
   }
 }

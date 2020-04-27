@@ -2,7 +2,7 @@
   color: #ffffff;
 
   display: inline-block;
-  padding: 13px 0;
+  padding: 10px 0;
   text-align: center;
   vertical-align: top;
 
@@ -16,7 +16,17 @@
     line-height: 1;
     margin-bottom: 0;
     margin-top: auto;
+    padding: 10px 0;
   }
+}
+
+.button:hover {
+  background-color: #5eaa2f;
+}
+
+.button:active {
+  background-color: #5eaa2f;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .button--commercial {
@@ -24,16 +34,26 @@
   margin: 0 auto;
 
   @media (min-width: @tablet-width) {
-    width: 280px;
+    width: auto;
+    padding: 16px 27px;
     position: absolute;
-    top: 286px;
+    top: 282px;
     left: 119px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 315px;
   }
 }
 
 .button--card {
   font-size: 16px;
   line-height: 20/16;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+    margin-top: auto;
+  }
 }
 
 .button--extra {
@@ -41,7 +61,9 @@
   line-height: 20/16;
 
   @media (min-width: @desktop-width) {
-    width: 245px;
+    width: auto;
+    padding-left: 92px;
+    padding-right: 92px;
   }
 }
 
@@ -55,6 +77,15 @@
   background-color: #f2f2f2;
 }
 
+.button--show:hover {
+  background-color: #ebebeb;
+}
+
+.button--show:active {
+  background-color: #ebebeb;
+  color: rgba(68, 68, 68, 0.3);
+}
+
 .button--form {
   font-size: 16px;
   line-height: 20/16;
@@ -62,13 +93,15 @@
   width: 280px;
   margin-left: 20px;
   margin-right: 20px;
-  margin-top: 34px;
-  margin-bottom: 23px;
+  margin-top: 30px;
+  margin-bottom: 18px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 1;
     margin: 0;
+    padding: 15px 65px;
+    width: auto;
   }
 
   @media (min-width: @desktop-width) {
