@@ -49,48 +49,56 @@
   }
 }
 
-// .track() {
-//   cursor: default;
-//   height: 14px;
-//   width: 84px;
-//   background-color: #ffffff;
-//   border: solid 1px #cdcdcd;
-//   border-radius: 6px;
+.track() {
+  height: 14px;
+  cursor: default;
+  background: #ffffff;
+  border-radius: 6px;
+  border: solid 1px #cdcdcd;
 
-//   @media (min-width: @tablet-width) {
-//     cursor: pointer;
-//     height: 6px;
-//     width: 428px;
-//     background-color: #dcdcdc;
-//     border: transparent;
-//     border-radius: 2.5px;
-//     border-width: 17px 0;
-//   }
-// }
+  @media (min-width: @tablet-width) {
+    height: 6px;
+    cursor: pointer;
+    background: #dcdcdc;
+    border-radius: 2.5px;
+    border: transparent;
+  }
+}
 
-// .thumb() {
-//   cursor: default;
-//   box-sizing: border-box;
-//   height: 6px;
-//   width: 35px;
-//   background-color: #68b738;
-//   border: none;
-//   border-radius: 3px;
+.ms-part-track() {
+  background-color: #ffffff;
+  border-bottom: solid 1px #cdcdcd;
+  border-top: solid 1px #cdcdcd;
 
-//   @media (min-width: @tablet-width) {
-//     cursor: pointer;
-//     height: 34px;
-//     width: 34px;
-//     border: 13px solid #ffffff;
-//     border-radius: 50%;
-//     box-shadow: 0 0 0 1px #cdcdcd, 0 2px 5px 0 rgba(0, 0, 0, 0.15);
 
-//     &:hover {
-//       box-shadow: 0 0 0 1px #cdcdcd, 0 3px 5px 0 rgba(0, 0, 0, 0.25);
-//     }
+  @media (min-width: @tablet-width) {
+    background: #dcdcdc;
+    border: transparent;
+    border-radius: 2.6px;
+  }
+}
 
-//     &:active {
-//       box-shadow: 0 0 0 2px #68b738, 0 4px 5px 0 rgba(0, 0, 0, 0.3);
-//     }
-//   }
-// }
+.thumb() {
+  cursor: default;
+  height: 6px;
+  width: 35px;
+  background-color: #68b738;
+  border: none;
+  border-radius: 3px;
+
+  @media (min-width: @tablet-width) {
+    box-shadow: 0 0 0 1px #cdcdcd, 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+    border: 13px solid #ffffff;
+    border-radius: 50%;
+    background-color: #68b738;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0 0 0 1px #cdcdcd, 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    &:active {
+      box-shadow: 0 0 0 2px #68b738, 0 4px 5px 0 rgba(0, 0, 0, 0.3);
+    }
+  }
+}
