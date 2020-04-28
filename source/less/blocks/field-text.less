@@ -134,8 +134,14 @@
   border: solid 2px #444444;
 }
 
-.field-text__input:invalid {
+.field-text__input:invalid:not(:placeholder-shown) {
   border: solid 2px #ff8282;
+}
+
+.field-text__input:invalid {
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    border: solid 2px #ff8282;
+  }
 }
 
 .field-text__input:focus + .field-text__mail,
@@ -143,7 +149,14 @@
   color: #68b738;
 }
 
+.field-text__input:invalid:not(:placeholder-shown) + .field-text__mail,
+.field-text__input:invalid:not(:placeholder-shown) + .field-text__phone {
+  color: #ff8282;
+}
+
 .field-text__input:invalid + .field-text__mail,
 .field-text__input:invalid + .field-text__phone {
-  color: #ff8282;
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    color: #ff8282;
+  }
 }

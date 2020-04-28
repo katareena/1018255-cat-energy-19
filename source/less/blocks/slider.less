@@ -117,24 +117,16 @@
   display: flex;
 
   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    padding-left: 30px;
+    align-self: center;
   }
 
   @media (min-width: @tablet-width) {
     z-index: 999999;
   }
 
-  @media (min-width: @tablet-width) and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    padding-left: 55px;
-  }
-
   @media (min-width: @desktop-width) {
     margin-right: 0;
     margin-left: auto;
-  }
-
-  @media (min-width: @desktop-width) and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    padding-left: 60px;
   }
 }
 

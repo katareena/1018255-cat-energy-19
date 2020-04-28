@@ -13,18 +13,23 @@
 }
 
 .commercial__inner {
-  min-height: 305px;
-  width: inherit;
+  height: 305px;
+  width: 320px;
   background-image: url("../img/index-background-mobile@1x.jpg");
+  background-color: #68b738;
+  background-size: contain;
   background-repeat: no-repeat;
   text-align: center;
 
-  @media (min-width: @tablet-width) {
-    min-height: 843px;
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/index-background-mobile@2x.jpg");
+  }
 
+  @media (min-width: @tablet-width) {
+    width: inherit;
+    min-height: 843px;
     background-image: none;
     background-color: #ffffff;
-
     padding-top: 53px;
   }
 
@@ -35,21 +40,77 @@
   }
 }
 
+// .commercial__inner::before {
+//   @media (min-width: @desktop-width) {
+//     content: "";
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100vw;
+//     height: 696px;
+
+//     background-color: #5da331f1;
+//     transform: translateX(650px) translateY(-142px);
+//   }
+// }
+
+// .commercial__inner::after {
+//   @media (min-width: @desktop-width) {
+//     content: "";
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 720px;
+//     height: 696px;
+
+//     background-image: url("../img/index-background-desktop@1x.jpg");
+//     background-color: #5da331f1;
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     transform: translateX(650px) translateY(-142px);
+//   }
+// }
+
 .commercial__inner::before {
   @media (min-width: @desktop-width) {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
+    width: 100vw;
+    height: 696px;
+
+    background-color: #5da331f1;
+    transform: translateX(650px) translateY(-142px);
+  }
+}
+
+.page-main__inner--background::after {
+  @media (min-width: @desktop-width) {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
     width: 720px;
     height: 696px;
 
     background-image: url("../img/index-background-desktop@1x.jpg");
+    background-color: #5da331f1;
     background-repeat: no-repeat;
     background-size: cover;
-    transform: translateX(650px) translateY(-142px);
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/index-background-desktop@2x.jpg");
+    }
   }
 }
+/// отдельный блок----------------------------------
+.site__container {
+  @media (min-width: @desktop-width) {
+    overflow: hidden;
+  }
+}
+//--------------------------------------------------
 
 .commercial__title {
   font-size: 36px;

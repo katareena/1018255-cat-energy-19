@@ -41,6 +41,12 @@
   padding-bottom: 29px;
   border-bottom: solid 1px rgba(0, 0, 0, 0.1);
 
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    display: block;
+    height: 30px;
+    padding: 0;
+  }
+
   @media (min-width: @tablet-width) {
     text-align: left;
     width: 150px;
