@@ -14,6 +14,10 @@
 
         <a class="page-header__logo" href="index.html">
           <picture class="page-header__logo-image">
+            <source type="image/webp" media="(min-width: 1300px)" srcset="img/logo-desktop.webp"/>
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet.webp"/>
+            <source type="image/webp" srcset="img/logo-mobile.webp"/>
+
             <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg"/>
             <source media="(min-width: 768px)" srcset="img/logo-tablet.svg"/>
             <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="Магазин «Кэт энерджи»" width="191" height="39"/>
@@ -178,7 +182,12 @@
       <div class="page-footer__inner">
 
         <a class="page-footer__logo-footer" href="index.html">
-          <img class="page-footer__logo-image" src="img/logotype-footer-mobile.svg" width="128" height="24" alt="Магазин «Кэт энерджи»">
+          <picture class="page-footer__logo-image">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-footer.webp"/>
+          <source type="image/webp" srcset="img/logotype-footer-mobile.webp" />
+
+          <source media="(min-width: 768px)" srcset="img/logo-footer.svg"/>
+          <img class="page-footer__logo-image" src="img/logotype-footer-mobile.svg" width="128" height="24" alt="Магазин «Кэт энерджи»"/>
         </a>
 
         <ul class="social">
