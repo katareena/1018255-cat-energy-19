@@ -68,7 +68,7 @@ task("img-min", () => {
 
 //--------------создание svg-спрайта---------------
 task("sprite", () => {
-  return src("source/img/sprite-icons/*.svg")
+  return src("source/sprite-icons/*.svg")
     .pipe(svgstore({
       inlineSvg: true
     }))
