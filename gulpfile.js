@@ -57,7 +57,7 @@ task("webp", () => {
 
 //--------------оптимизация изображений------------
 task("img-min", () => {
-  return src("build/img/*.{png,jpg,svg}")
+  return src(["build/img/*.{png,jpg,svg}", "!build/img/sprite.svg"])
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 3}),
       imagemin.mozjpeg({progressive: true}),
