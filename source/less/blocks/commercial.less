@@ -4,22 +4,29 @@
   text-align: center;
 
   @media (min-width: @tablet-width) {
+    min-height: 863px;
+    text-align: left;
     position: relative;
+    padding-left: 117px;
   }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 80px;
+    min-height: 554px;
   }
 }
 
 .commercial__inner {
-  height: 305px;
+  min-height: 305px;
   width: 320px;
   background-image: url("../img/index-background-mobile@1x.jpg");
-  background-color: #68b738;
+  background-color: #67a83e;
   background-size: contain;
   background-repeat: no-repeat;
   text-align: center;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 135px;
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
     background-image: url("../img/index-background-mobile@2x.jpg");
@@ -27,50 +34,24 @@
 
   @media (min-width: @tablet-width) {
     width: inherit;
-    min-height: 843px;
+    min-height: 280px;
     background-image: none;
     background-color: #ffffff;
     padding-top: 53px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @tablet-width) and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    margin-bottom: -50px;
   }
 
   @media (min-width: @desktop-width) {
-    min-height: 554px;
+    min-height: 315px;
     padding-top: 80px;
     position: relative;
-    //background-color: transparent;
+    z-index: auto;
   }
 }
-
-// .commercial__inner::before {
-//   @media (min-width: @desktop-width) {
-//     content: "";
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     width: 100vw;
-//     height: 696px;
-
-//     background-color: #5da331f1;
-//     transform: translateX(650px) translateY(-142px);
-//   }
-// }
-
-// .commercial__inner::after {
-//   @media (min-width: @desktop-width) {
-//     content: "";
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     width: 720px;
-//     height: 696px;
-
-//     background-image: url("../img/index-background-desktop@1x.jpg");
-//     background-color: #5da331f1;
-//     background-repeat: no-repeat;
-//     background-size: cover;
-//     transform: translateX(650px) translateY(-142px);
-//   }
-// }
 
 .commercial__inner::before {
   @media (min-width: @desktop-width) {
@@ -78,39 +59,13 @@
     position: absolute;
     top: 0;
     left: 0;
+
     width: 100vw;
-    height: 696px;
-
-    background-color: #5da331f1;
-    transform: translateX(650px) translateY(-142px);
+    height: 726px;
+    background-color: #67a83e;
+    transform: translateX(535px) translateY(-172px);
   }
 }
-
-.page-main__inner--background::after {
-  @media (min-width: @desktop-width) {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 720px;
-    height: 696px;
-
-    background-image: url("../img/index-background-desktop@1x.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url("../img/index-background-desktop@2x.jpg");
-    }
-  }
-}
-/// отдельный блок----------------------------------
-.site__container {
-  @media (min-width: @desktop-width) {
-    overflow: hidden;
-  }
-}
-//--------------------------------------------------
 
 .commercial__title {
   font-size: 36px;
@@ -120,6 +75,8 @@
   margin-top: 0;
   margin-bottom: 26px;
   padding-top: 25px;
+  z-index: 3;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     font-size: 60px;
@@ -128,15 +85,10 @@
 
     margin-top: 0;
     margin-bottom: 41px;
-    margin-left: 117px;
 
     padding-top: 0;
     width: 480px;
     text-align: left;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-left: 120px;
   }
 }
 
@@ -145,6 +97,8 @@
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 29px;
+  z-index: 3;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -153,23 +107,24 @@
     text-align: left;
 
     margin: 0;
-    margin-left: 117px;
-    margin-bottom: 20px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-left: 120px;
+    margin-bottom: 48px;
+    width: 480px;
   }
 }
 
 .commercial__box {
   width: 280px;
   height: 271px;
-  margin: 0 auto;
+  position: absolute;
+  left: 20px;
+  top: 167px;
+  z-index: 2;
 
   @media (min-width: @tablet-width) {
     width: 709px;
     height: 609px;
+    top: 255px;
+    left: -90px;
   }
 
   @media (min-width: @desktop-width) {
@@ -177,7 +132,8 @@
     height: 499px;
     position: absolute;
     top: 0;
-    right: 257px;
+    left: 374px;
+    z-index: auto;
   }
 }
 

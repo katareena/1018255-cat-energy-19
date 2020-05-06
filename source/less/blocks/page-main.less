@@ -20,6 +20,25 @@
   }
 }
 
+.page-main__inner--background::after {
+  @media (min-width: @desktop-width) {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 720px;
+    height: 696px;
+    background-image: url("../img/index-background-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/index-background-desktop@2x.jpg");
+    }
+  }
+}
+
 .page-main__inner--form {
   .mobile-padding();
 
