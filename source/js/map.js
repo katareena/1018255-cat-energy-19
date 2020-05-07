@@ -1,21 +1,4 @@
 function mapInit() {
-  var map = new ymaps.Map(document.querySelector('.map'), {
-    center: [59.938631, 30.323055],
-    zoom: 16,
-    controls: ['zoomControl'],
-  });
-
-  var placemark = new ymaps.Placemark([59.938631, 30.323055], {}, {
-    iconLayout: 'default#image',
-    iconImageHref: 'img/map-pin.png',
-    iconImageSize: [60, 53],
-    iconImageOffset: [-25, -53],
-  });
-
-  map.geoObjects.add(placemark);
-}
-
-function mapInit() {
   var screens = {
     sm: 320,
     md: 768,
