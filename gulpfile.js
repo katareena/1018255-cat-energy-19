@@ -41,6 +41,13 @@ task("copy:img", () => {
     .pipe(server.stream());
 });
 
+task("copy:ico", () => {
+  return  src("source/img/**/*.ico")
+    .pipe(newer("build"))
+    .pipe(dest("build"))
+    .pipe(server.stream());
+});
+
 //-------------- копируем шрифты ----------------------
 task("copy:fonts", () => {
   return  src("source/fonts/*.{woff,woff2}")
@@ -125,11 +132,12 @@ task("watch", () => {
   watch("source/*.html", series("html", "refresh"));
   watch("source/js/**/*.js", series("js"));
   watch("source/img/**/*.{jpg,svg,png}", series("copy:img"));
+  watch("source/img/**/*.ico", series("copy:ico"));
   watch("source/sprite-icons/*.svg", series("sprite", "refresh"));
   watch("source/fonts/*.{woff,woff2}", series("copy:fonts"));
 });
 
-const buildTasks = ["clean", parallel(["html", "css", "js", "webp", "copy:fonts", "copy:img", "sprite"])];
+const buildTasks = ["clean", parallel(["html", "css", "js", "webp", "copy:fonts", "copy:img", "copy:ico", "sprite"])];
 
 if (!isDev) {
   buildTasks.push("img-min");

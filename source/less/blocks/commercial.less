@@ -34,15 +34,12 @@
 
   @media (min-width: @tablet-width) {
     width: inherit;
-    min-height: 280px;
+    min-height: 230px;
     background-image: none;
     background-color: #ffffff;
     padding-top: 53px;
     margin-bottom: 0;
-  }
-
-  @media (min-width: @tablet-width) and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    margin-bottom: -50px;
+    box-sizing: border-box;
   }
 
   @media (min-width: @desktop-width) {
@@ -138,7 +135,17 @@
 }
 
 .commercial__product-image {
+  width: 280px;
+  height: 271px;
+
+  @media (min-width: @tablet-width) {
+    width: 709px;
+    height: 609px;
+  }
+
   @media (min-width: @desktop-width) {
+    width: 552px;
+    height: 499px;
     z-index: 2;
     position: relative;
   }

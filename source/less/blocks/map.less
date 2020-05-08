@@ -1,9 +1,49 @@
 .map {
   height: 360px;
+  width: 100%;
+  position: relative;
+  background-color: #ededed;
 }
 
 @media (min-width: @tablet-width) {
   .map {
     height: 400px;
+  }
+}
+
+.map::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  height: 360px;
+  width: 320px;
+  background-image: url("../img/bg-map-mobile@1x.png");
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/bg-map-mobile@2x.png");
+    background-size: contain;
+  }
+
+  @media (min-width: @tablet-width) {
+    height: 400px;
+    width: 768px;
+    background-image: url("../img/bg-map-tablet@1x.png");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-map-tablet@2x.png");
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1300px;
+    background-image: url("../img/bg-map-desktop@1x.png");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-map-desktop@2x.png");
+    }
   }
 }
