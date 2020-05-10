@@ -4,14 +4,11 @@
     <meta charset="utf-8">
     <title>Магазин функционального питания для котов "Кэт энерджи"</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Питание для котов">
     <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
     <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
     <link href="css/style.min.css" rel="stylesheet">
-    <!-- <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"> -->
     <link rel="shortcut icon" href="favicon.ico"/>
-    <!-- <link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="icon" href="favicon.ico"/> -->
   </head>
   <body>
     <div class="site-container">
@@ -27,13 +24,10 @@
             </picture>
           </a>
 
-          <nav class="main-nav main-nav--open">
-            <button class="main-nav__toggle burger" type="button">
-              <!--<span class="burger__open"></span>
-              <span class="burger__close"></span>-->
-            </button>
+          <nav class="main-nav">
+            <button class="main-nav__toggle burger" type="button" id="close" onclick="myFunction()" aria-label="кнопка открытия меню"></button>
 
-            <ul class="main-nav__list">
+            <ul id="dropdown" class="main-nav__list main-nav__list--open">
               <li class="main-nav__item">
                 <a class="main-nav__link main-nav__link--index main-nav__link--visitedIndex">Главная</a>
               </li>
@@ -167,7 +161,7 @@
                 </figure>
                 <div class="slider__scale">
                   <button class="slider__button" type="button">Было</button>
-                  <input class="slider__range" type="range" min="0" max="100" value="50">
+                  <input class="slider__range" type="range" min="0" max="100" value="50" aria-label="Сравнение кота до функционального питания Кэт энерджи и после">
                   <button class="slider__button slider__button--now" type="button">Стало</button>
                 </div>
               </div>
@@ -226,9 +220,9 @@
             </li>
           </ul>
 
-          <article class="copyright">
+          <div class="copyright">
             <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Логотип HTML Academy">HTML Academy</a>
-          </article>
+          </div>
 
         </div>
       </footer>

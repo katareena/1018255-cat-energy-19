@@ -1,10 +1,10 @@
 .card {
   width: 100%; /*320 от page-main__inner*/
-  min-height: 210px;
+  min-height: 209px;
   padding-top: 0;
   padding-left: 20px;
   padding-right: 20px;
-  padding-bottom: 23px;
+  //padding-bottom: 20px;
   border: solid 1px #ededed;
 
   display: flex;
@@ -45,14 +45,14 @@
 
   @media (min-width: @tablet-width) {
     position: absolute;
-    bottom: 206px;
+    bottom: 192px;
     width: 324px;
     left: 50%;
     transform: translateX(-50%);
   }
 
   @media (min-width: @desktop-width) {
-    bottom: 200px;
+    bottom: 189px;
     width: 248px;
   }
 }
@@ -69,11 +69,11 @@
 
 .card__content {
   flex: 0 0 50%;
-  padding-top: 22px;
-  padding-bottom: 15px;
+  padding-top: 20px;
+  //padding-bottom: 15px;
 
   @media (min-width: @tablet-width) {
-    padding-top: 165px;
+    padding-top: 163px;
   }
 
   @media (min-width: @desktop-width) {
@@ -89,7 +89,7 @@
 
   margin: 0;
   padding: 0;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 
   display: block;
   width: 80px;
@@ -98,7 +98,7 @@
     font-size: 20px;
     line-height: 1;
     margin: 0 auto;
-    margin-bottom: 17px;
+    margin-bottom: 19px;
     text-align: center;
     width: 150px;
   }
@@ -147,7 +147,8 @@
 /*---------------карточка показать больше------------*/
 .card--more {
   align-items: center;
-  padding-top: 80px;
+  padding-top: 79px;
+  padding-bottom: 25px;
 
   position: relative;
 
@@ -187,11 +188,20 @@
 }
 
 .card__title--more {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20/16;
+  color: #111111;
+
   width: 280px;
   margin-bottom: 7px;
   text-align: center;
 
   @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 1;
+
     width: 145px;
     margin: 0;
     margin-bottom: 28px;

@@ -4,12 +4,11 @@
     <meta charset="utf-8">
     <title>Магазин функционального питания для котов "Кэт энерджи"</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/style.min.css" rel="stylesheet">
-    <link rel="icon" type="image/ico" sizes="32x32" href="favicon.ico">
-    <link rel="icon" type="image/ico" sizes="16x16" href="favicon.ico">
-    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="description" content="Питание для котов">
     <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
     <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
+    <link href="css/style.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico"/>
   </head>
   <body>
 
@@ -25,12 +24,9 @@
         </a>
 
         <nav class="main-nav">
-          <button class="main-nav__toggle burger" type="button">
-          <!--<span class="burger__open"></span>
-          <span class="burger__close"></span>-->
-          </button>
+          <button class="main-nav__toggle burger" type="button" id="close" onclick="myFunction()" aria-label="кнопка открытия меню"></button>
 
-          <ul class="main-nav__list">
+          <ul id="dropdown" class="main-nav__list main-nav__list--open">
             <li class="main-nav__item">
               <a class="main-nav__link" href="index.html">Главная</a>
             </li>
@@ -56,6 +52,7 @@
             <h2 class="visually-hidden">Основные товары</h2>
 
             <article class="card">
+              <h3 class="visually-hidden">Карточка товара</h3>
               <div class="card__inner">
                 <a class="card__box" href="#">
                   <picture class="card__img">
@@ -94,6 +91,7 @@
             </article>
 
             <article class="card">
+              <h3 class="visually-hidden">Карточка товара</h3>
               <div class="card__inner">
                 <a class="card__box" href="#">
                   <picture class="card__img">
@@ -132,6 +130,7 @@
             </article>
 
             <article class="card">
+              <h3 class="visually-hidden">Карточка товара</h3>
               <div class="card__inner">
                 <a class="card__box" href="#">
                   <picture class="card__img">
@@ -170,6 +169,7 @@
             </article>
 
             <article class="card">
+              <h3 class="visually-hidden">Карточка товара</h3>
               <div class="card__inner">
                 <a class="card__box" href="#">
                   <picture class="card__img">
@@ -208,6 +208,7 @@
             </article>
 
             <article class="card">
+              <h3 class="visually-hidden">Карточка товара</h3>
               <div class="card__inner">
                 <a class="card__box" href="#">
                   <picture class="card__img">
@@ -246,6 +247,7 @@
             </article>
 
             <article class="card">
+              <h3 class="visually-hidden">Карточка товара</h3>
               <div class="card__inner">
                 <a class="card__box" href="#">
                   <picture class="card__img">
@@ -284,6 +286,7 @@
             </article>
 
             <article class="card">
+              <h3 class="visually-hidden">Карточка товара</h3>
               <div class="card__inner">
                 <a class="card__box" href="#">
                   <picture class="card__img">
@@ -321,11 +324,11 @@
               <a class="button button--card" href="#">Заказать</a>
             </article>
 
-            <article class="card card--more">
+            <div class="card card--more">
               <h3 class="card__title card__title--more">Показать еще 100500 товаров</h3>
               <span class="card__text">На самом деле вкусов гораздо больше!</span>
               <a class="button button--show" href="">Показать все</a>
-            </article>
+            </div>
 
         </section>
 
@@ -335,7 +338,9 @@
 
             <div class="extra__container">
               <div class="extra__box">
+
                 <article class="extra-item">
+                  <h3 class="visually-hidden">Карточка товара</h3>
                   <div class="extra-item__inner">
                     <span class="extra-item__title">Сахарозаменитель</span>
                     <table class="extra-item__description">
@@ -349,6 +354,7 @@
                 </article>
 
                 <article class="extra-item">
+                  <h3 class="visually-hidden">Карточка товара</h3>
                   <div class="extra-item__inner">
                     <span class="extra-item__title">Питьевая вода</span>
                     <table class="extra-item__description">
@@ -362,6 +368,7 @@
                 </article>
 
                 <article class="extra-item">
+                  <h3 class="visually-hidden">Карточка товара</h3>
                   <div class="extra-item__inner">
                     <span class="extra-item__title">Молоко</span>
                     <table class="extra-item__description">
@@ -375,6 +382,7 @@
                 </article>
 
                 <article class="extra-item">
+                  <h3 class="visually-hidden">Карточка товара</h3>
                   <div class="extra-item__inner">
                     <span class="extra-item__title">Витамины</span>
                     <table class="extra-item__description">
@@ -389,11 +397,11 @@
 
               </div>
 
-              <article class="promo">
+              <div class="promo">
                 <div class="promo__inner">
                   <p class="promo__title">Закажите все и получите чехол для кота в подарок!</p>
                 </div>
-              </article>
+              </div>
             </div>
           </div>
         </section>
@@ -451,9 +459,9 @@
           </li>
         </ul>
 
-        <article class="copyright">
+        <div class="copyright">
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Логотип HTML Academy">HTML Academy</a>
-        </article>
+        </div>
 
       </div>
     </footer>

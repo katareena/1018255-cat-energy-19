@@ -19,6 +19,7 @@ const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const posthtml = require("gulp-posthtml");
 const include = require("posthtml-include");
+const htmlmin = require("gulp-htmlmin");
 
 const isDev = !process.env.NODE_ENV || process.env.NODE_ENV === "development";
 
@@ -33,9 +34,15 @@ task("html", () => {
     .pipe(dest("build"));
 })
 
+task('htmlmin', () => {
+  return src("source/*.html")
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(dest("build"));
+});
+
 //-------------- копируем картинки ----------------------
 task("copy:img", () => {
-  return  src("source/img/**/*.{jpg,png,svg}")
+  return  src("source/img/**/*.{jpg,png,svg,webp}")
     .pipe(newer("build/img"))
     .pipe(dest("build/img"))
     .pipe(server.stream());
@@ -59,7 +66,7 @@ task("copy:fonts", () => {
 task("webp", () => {
   return src("source/img/**/*.{png,jpg}")
     .pipe(webp({quality: 90}))
-    .pipe(dest("build/img"));
+    .pipe(dest("source/img"));
 });
 
 //--------------оптимизация изображений------------
@@ -137,7 +144,7 @@ task("watch", () => {
   watch("source/fonts/*.{woff,woff2}", series("copy:fonts"));
 });
 
-const buildTasks = ["clean", parallel(["html", "css", "js", "webp", "copy:fonts", "copy:img", "copy:ico", "sprite"])];
+const buildTasks = ["clean", parallel(["html", "css", "js", "copy:fonts", "copy:img", "copy:ico", "sprite"])];
 
 if (!isDev) {
   buildTasks.push("img-min");
