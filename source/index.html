@@ -4,7 +4,11 @@
     <meta charset="utf-8">
     <title>Магазин функционального питания для котов "Кэт энерджи"</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Питание для котов">
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
     <link href="css/style.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico"/>
   </head>
   <body>
     <div class="site-container">
@@ -16,17 +20,14 @@
             <picture class="page-header__logo-image">
               <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg"/>
               <source media="(min-width: 768px)" srcset="img/logo-tablet.svg"/>
-              <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="Магазин «Кэт энерджи»" width="191" height="39"/>
+              <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="Логотип магазина «Кэт энерджи»" width="191" height="39"/>
             </picture>
           </a>
 
-          <nav class="main-nav main-nav--open">
-            <button class="main-nav__toggle burger" type="button">
-              <!--<span class="burger__open"></span>
-              <span class="burger__close"></span>-->
-            </button>
+          <button class="burger" type="button" id="close" onclick="myFunction()" aria-label="кнопка открытия меню"></button>
+          <nav id="dropdown" class="main-nav main-nav--open">
 
-            <ul class="main-nav__list">
+            <ul  class="main-nav__list ">
               <li class="main-nav__item">
                 <a class="main-nav__link main-nav__link--index main-nav__link--visitedIndex">Главная</a>
               </li>
@@ -58,7 +59,7 @@
 
                 <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png 1x,img/index-can-desktop@2x.png 2x"/>
                 <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg 1x,img/index-can-tablet@2x.jpg 2x"/>
-                <img class="commercial__product-image" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x" alt="Банка корма для котов" width="" height=""/>
+                <img class="commercial__product-image" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x" alt="Банка корма для котов" width="280" height="271"/>
               </picture>
             </div>
           </div>
@@ -144,23 +145,23 @@
 
                     <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x"/>
                     <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x"/>
-                    <img class="slider__catBefore-img" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="Кот ДО функционального питания Кэт энерджи" width="" height=""/>
+                    <img class="slider__catBefore-img" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="Кот ДО функционального питания Кэт энерджи" width="320" height="240"/>
                   </picture>
 
                   <picture class="slider__catAfter-img">
                     <source type="image/webp" media="(min-width: 1300px)" srcset="img/after-desktop@1x.webp 1x,img/after-desktop@2x.webp 2x"/>
                     <source type="image/webp" media="(min-width: 768px)" srcset="img/after-tablet@1x.webp 1x,img/after-tablet@2x.webp 2x"/>
-                    <source type="image/webp" src="img/after-mobile@1x.webp" srcset="img/after-mobile@1x.webp 1x,img/after-mobile@2x.webp 2x"/>
+                    <source type="image/webp" srcset="img/after-mobile@1x.webp 1x,img/after-mobile@2x.webp 2x"/>
 
                     <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x,img/after-desktop@2x.png 2x"/>
                     <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x,img/after-tablet@2x.png 2x"/>
-                    <img class="slider__catAfter-img" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="Кот ПОСЛЕ функционального питания Кэт энерджи" width="" height=""/>
+                    <img class="slider__catAfter-img" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="Кот ПОСЛЕ функционального питания Кэт энерджи" width="320" height="240"/>
                   </picture>
 
                 </figure>
                 <div class="slider__scale">
                   <button class="slider__button" type="button">Было</button>
-                  <input class="slider__range" type="range" min="0" max="100" value="50">
+                  <input class="slider__range" type="range" min="0" max="100" value="50" aria-label="Сравнение кота до функционального питания Кэт энерджи и после">
                   <button class="slider__button slider__button--now" type="button">Стало</button>
                 </div>
               </div>
@@ -191,7 +192,7 @@
           <a class="page-footer__logo-footer">
             <picture class="page-footer__logo-image">
               <source media="(min-width: 768px)" srcset="img/logo-footer.svg"/>
-              <img class="page-footer__logo-image" src="img/logotype-footer-mobile.svg" width="128" height="24" alt="Магазин «Кэт энерджи»"/>
+              <img class="page-footer__logo-image" src="img/logotype-footer-mobile.svg" alt="Логотип магазина «Кэт энерджи»" width="128" height="24"/>
             </picture>
           </a>
 
@@ -219,9 +220,9 @@
             </li>
           </ul>
 
-          <article class="copyright">
+          <div class="copyright">
             <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Логотип HTML Academy">HTML Academy</a>
-          </article>
+          </div>
 
         </div>
       </footer>

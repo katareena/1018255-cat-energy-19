@@ -1,5 +1,21 @@
 .burger {
-  display: none;
+  width: 22px;
+  height: 19px;
+  border: none;
+  background-color: transparent;
+  background-image: url("../img/icon-mobile-menu.svg");
+  cursor: pointer;
+
+  position: absolute;
+  right: 22px;
+  top: 25px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.burger__close {
   width: 19px;
   height: 19px;
   border: none;
@@ -9,5 +25,5 @@
 
   position: absolute;
   right: 22px;
-  top: 22px;
+  top: 25px;
 }

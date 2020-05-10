@@ -19,6 +19,7 @@ const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const posthtml = require("gulp-posthtml");
 const include = require("posthtml-include");
+const htmlmin = require("gulp-htmlmin");
 
 const isDev = !process.env.NODE_ENV || process.env.NODE_ENV === "development";
 
@@ -28,16 +29,30 @@ task("clean", () => {
 });
 
 //-------------- собираем html ----------------------
+// task("html", () => {
+//   return src("source/*.html")
+//     .pipe(dest("build"));
+// })
+
 task("html", () => {
   return src("source/*.html")
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    //.pipe(rename("*.min.html"))
     .pipe(dest("build"));
 })
 
 //-------------- копируем картинки ----------------------
 task("copy:img", () => {
-  return  src("source/img/**/*.{jpg,png,svg}")
+  return  src("source/img/**/*.{jpg,png,svg,webp}")
     .pipe(newer("build/img"))
     .pipe(dest("build/img"))
+    .pipe(server.stream());
+});
+
+task("copy:ico", () => {
+  return  src("source/img/**/*.ico")
+    .pipe(newer("build"))
+    .pipe(dest("build"))
     .pipe(server.stream());
 });
 
@@ -52,7 +67,7 @@ task("copy:fonts", () => {
 task("webp", () => {
   return src("source/img/**/*.{png,jpg}")
     .pipe(webp({quality: 90}))
-    .pipe(dest("build/img"));
+    .pipe(dest("source/img"));
 });
 
 //--------------оптимизация изображений------------
@@ -125,11 +140,12 @@ task("watch", () => {
   watch("source/*.html", series("html", "refresh"));
   watch("source/js/**/*.js", series("js"));
   watch("source/img/**/*.{jpg,svg,png}", series("copy:img"));
+  watch("source/img/**/*.ico", series("copy:ico"));
   watch("source/sprite-icons/*.svg", series("sprite", "refresh"));
   watch("source/fonts/*.{woff,woff2}", series("copy:fonts"));
 });
 
-const buildTasks = ["clean", parallel(["html", "css", "js", "webp", "copy:fonts", "copy:img", "sprite"])];
+const buildTasks = ["clean", parallel(["html", "css", "js", "copy:fonts", "copy:img", "copy:ico", "sprite"])];
 
 if (!isDev) {
   buildTasks.push("img-min");

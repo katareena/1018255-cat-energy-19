@@ -43,6 +43,10 @@
 
   @media (min-width: @tablet-width) {
     padding-left: 60px;
+    line-height: 38px;
+  }
+
+  @media (min-width: @desktop-width) {
     line-height: 40px;
   }
 }
@@ -86,9 +90,6 @@
 .field-radio__input:not(:checked) + .field-radio__label::after {
   content: "";
   position: absolute;
-  //-webkit-transition: all 0.2s ease;
-  //-moz-transition: all 0.2s ease;
-  //-o-transition: all 0.2s ease;
   transition: all 0.2s ease;
   left: 9px;
   top: 9px;
@@ -104,23 +105,6 @@
     height: 18px;
   }
 }
-
-/*.field-radio__input:checked + .field-radio__label::after,
-.field-radio__input:not(:checked) + .field-radio__label::after {
-  left: 9px;
-  top: 9px;
-  width: 12px;
-  height: 12px;
-  border-radius: 100%;
-  background-color: #68b738;
-
-  @media (min-width: @tablet-width) {
-    left: 11px;
-    top: 9px;
-    width: 18px;
-    height: 18px;
-  }
-}*/
 
 .field-radio__input:not(:checked) + .field-radio__label::after {
   opacity: 0;
