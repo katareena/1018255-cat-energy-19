@@ -29,16 +29,17 @@ task("clean", () => {
 });
 
 //-------------- собираем html ----------------------
+// task("html", () => {
+//   return src("source/*.html")
+//     .pipe(dest("build"));
+// })
+
 task("html", () => {
   return src("source/*.html")
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    //.pipe(rename("*.min.html"))
     .pipe(dest("build"));
 })
-
-task('htmlmin', () => {
-  return src("source/*.html")
-    .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(dest("build"));
-});
 
 //-------------- копируем картинки ----------------------
 task("copy:img", () => {
