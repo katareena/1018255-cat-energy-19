@@ -23,10 +23,9 @@
           </picture>
         </a>
 
-        <nav class="main-nav">
-          <button class="main-nav__toggle burger" type="button" id="close" onclick="myFunction()" aria-label="кнопка открытия меню"></button>
-
-          <ul id="dropdown" class="main-nav__list main-nav__list--open">
+        <button class="burger burger--hidden" type="button" id="close" onclick="myFunction()" aria-label="кнопка открытия меню"></button>
+          <nav id="dropdown" class="main-nav main-nav--open">
+            <ul  class="main-nav__list ">
             <li class="main-nav__item">
               <a class="main-nav__link" href="index.html">Главная</a>
             </li>
@@ -60,11 +59,11 @@
                 </div>
                 <div class="field-text">
                   <label class="field-text__label" for="weight">Вес (кг):*</label>
-                  <input class="field-text__input" id="weight" name="weight"  type="number" placeholder="7" required>
+                  <input class="field-text__input field-text__input--number" id="weight" name="weight"  type="number" placeholder="7" required>
                 </div>
                 <div class="field-text">
                   <label class="field-text__label" for="age">Возраст (лет):</label>
-                  <input class="field-text__input" id="age" name="age"  type="number" placeholder="7">
+                  <input class="field-text__input field-text__input--number" id="age" name="age"  type="number" placeholder="7">
                 </div>
 
               </fieldset>

@@ -1,4 +1,5 @@
 document.getElementById("dropdown").classList.remove("main-nav--open");
+document.getElementById("close").classList.remove("burger--hidden");
 
 function myFunction() {
   document.getElementById("dropdown").classList.toggle("main-nav--open");

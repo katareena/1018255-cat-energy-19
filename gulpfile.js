@@ -29,15 +29,9 @@ task("clean", () => {
 });
 
 //-------------- собираем html ----------------------
-// task("html", () => {
-//   return src("source/*.html")
-//     .pipe(dest("build"));
-// })
-
 task("html", () => {
   return src("source/*.html")
     .pipe(htmlmin({ collapseWhitespace: true }))
-    //.pipe(rename("*.min.html"))
     .pipe(dest("build"));
 })
 
@@ -89,6 +83,15 @@ task("sprite", () => {
     }))
     .pipe(rename("sprite.svg"))
     .pipe(dest("build/img"));
+})
+
+
+task("cssmin", () => {
+  return src("source/less/*.less")
+    .pipe(plumber())
+    .pipe(less())
+    .pipe(postcss([autoprefixer()]))
+    .pipe(dest("build/css"));
 })
 
 //-------------- собираем css ----------------------

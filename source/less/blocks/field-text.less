@@ -67,7 +67,6 @@
   flex: 1 1 auto;
   min-width: 0;
 
-
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 1;
@@ -94,7 +93,6 @@
 .field-text__input--phone {
   padding-right: 48px;
 }
-
 
 .field-text__mail {
   fill: currentColor;
@@ -163,4 +161,14 @@
   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
     color: #ff8282;
   }
+}
+
+.field-text__input::-webkit-outer-spin-button,
+.field-text__input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.field-text__input--number {
+  appearance: textfield;
 }
