@@ -85,13 +85,13 @@ task("sprite", () => {
     .pipe(dest("build/img"));
 })
 
-
-task("cssmin", () => {
-  return src("source/less/*.less")
-    .pipe(plumber())
-    .pipe(less())
-    .pipe(postcss([autoprefixer()]))
-    .pipe(dest("build/css"));
+//-------------- собираем css (без сорсмап, без минификации) ----------------------
+task("csscopy", () => {
+  return src("source/less/style.less")
+  .pipe(plumber())
+  .pipe(less())
+  .pipe(postcss([autoprefixer()]))
+  .pipe(dest("build/css"));
 })
 
 //-------------- собираем css ----------------------
@@ -148,7 +148,7 @@ task("watch", () => {
   watch("source/fonts/*.{woff,woff2}", series("copy:fonts"));
 });
 
-const buildTasks = ["clean", parallel(["html", "css", "js", "copy:fonts", "copy:img", "copy:ico", "sprite"])];
+const buildTasks = ["clean", parallel(["html","csscopy", "css", "js", "copy:fonts", "copy:img", "copy:ico", "sprite"])];
 
 if (!isDev) {
   buildTasks.push("img-min");
