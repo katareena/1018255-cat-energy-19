@@ -36,9 +36,8 @@
 
   @media (min-width: @tablet-width) {
     min-height: 200px;
-    align-items: center;
     background-image: url("../img/gift-photo-tablet@1x.jpg");
-    padding-top: 0;
+    padding-top: 72px;
     padding-left: 424px;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
@@ -49,14 +48,11 @@
     &::before {
       left: 90px;
     }
-
-    @media (min-width: @tablet-width) and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-      padding-top: 72px;
-    }
   }
 
   @media (min-width: @desktop-width) {
     width: inherit;
+    padding-top: 186px;
     padding-left: 0;
     min-height: inherit;
     background-image: url("../img/gift-photo-desktop@1x.jpg");
@@ -70,6 +66,10 @@
     &::before {
       left: 95px;
     }
+  }
+
+  @media (min-width: @desktop-width) and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    padding-top: 186px;
   }
 }
 
@@ -93,8 +93,8 @@
     width: 159px;
     min-height: 56px;
     margin: 0 auto;
-    margin-top: auto;
-    margin-bottom: 43px;
+    // margin-top: auto;
+    // margin-bottom: 43px;
     padding: 0;
     text-align: center;
   }
